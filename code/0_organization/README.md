@@ -6,19 +6,21 @@
   
 - this is the resulting directory path:  
 
-project_name
-├── code
-├── data
-│   ├── metadata
-│   ├── raw_ext
-│   └── raw_int
-├── doc
-├── logs
-├── notebooks
-├── readme.md
-├── results
-│   ├── figures
-│   ├── reports
-│   └── tables
-├── scratch
-└── temp
+project_name  
+├── code  
+├── data  
+│   ├── metadata  
+│   ├── raw_ext  
+│   └── raw_int  
+├── doc  
+├── logs  
+├── notebooks  
+├── readme.md  
+├── results  
+│   ├── figures  
+│   ├── reports  
+│   └── tables  
+├── scratch  
+└── temp  
+  
+
