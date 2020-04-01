@@ -11,6 +11,29 @@ The genome is available from NCBI Genbank (**CP014529 - CP014535**). The availab
   
 ![directory_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/short_data_dir_tree.png)  
   
+### Extract information from paper  
+- Genomics:  
+    - sequencing:  
+        - short reads: Illumina HiSew 100 bp pair-end  
+        - long reads: Pacific Biosciences RS II SMRT  
+        - long reads: MinION with R7 flowcell   
+    - genomic assembly of corrected PacBio reads: Celera (v. 8.1)
+        > corrected with what?  
+    - correct the assembly: align Illumina reads with BWA (v. 0.7.9a)  
+        - indexing with default parameters  
+        - aligning with BWA-MEM algorithm and *-M* option  
+    - QC on the 15 resulting contigs:  
+        - 1 covers the entire 2.77 Mbp chromosome  
+        - discard low-coverage contigs  
+        - remain 10 contig:  
+            - 5 circular plasmids  
+            - 5 non-overlapping contigs:
+                - aligning against the NCBI Genbank -> they are part of the pMG1 *E. faecium* plasmid
+                > is it a plasmid used for creating the library? Used for cloning?
+                - to close the 6th plasmid, they did gap-spanning PCR and sequencing. This closed most gaps, except one. Then did an assebly of Illumina reads together with MinION 2D reads, assembling them with SPAdes (v. 3.0). 
+    -
+- Transcriptomics:  
+  
 ### Organization of new data  
   
 - In order to keep the project organized, I have decided on the types of files that I will have and on the organizational framework of the project.  
@@ -22,6 +45,8 @@ The genome is available from NCBI Genbank (**CP014529 - CP014535**). The availab
   
 ![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/organiz_dir_tree2.png)  
 <!-- ![](images/long_data_dir_tree2.png) -->  
+  
+The script for each step and each software goes into a folder with its name in **code** folder and the analysis result from each software go into a folder with the software's name in **results** folder.
 *** 
 
 ### Workflow  
