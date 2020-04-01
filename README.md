@@ -11,7 +11,7 @@ The genome is available from NCBI Genbank (**CP014529 - CP014535**). The availab
   
 ![directory_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/short_data_dir_tree.png)  
   
-### Extract information from paper  
+### Extracting information from paper  
 - Genomics:  
     - sequencing:  
         - short reads: Illumina HiSew 100 bp pair-end  
@@ -26,12 +26,17 @@ The genome is available from NCBI Genbank (**CP014529 - CP014535**). The availab
         - 1 covers the entire 2.77 Mbp chromosome  
         - discard low-coverage contigs  
         - remain 10 contig:  
-            - 5 circular plasmids  
-            - 5 non-overlapping contigs:
-                - aligning against the NCBI Genbank -> they are part of the pMG1 *E. faecium* plasmid
-                > is it a plasmid used for creating the library? Used for cloning?
-                - to close the 6th plasmid, they did gap-spanning PCR and sequencing. This closed most gaps, except one. Then did an assebly of Illumina reads together with MinION 2D reads, assembling them with SPAdes (v. 3.0). 
-    -
+            - 5 circular plasmids   
+            - 5 non-overlapping contigs:  
+                - aligning against the NCBI Genbank -> they are part of the pMG1 *E. faecium* plasmid  
+                > is it a plasmid used for creating the library? Used for cloning?  
+                - to close the 6th plasmid, they did gap-spanning PCR and sequencing. This closed most gaps, except one. Afterwards they did an assebly of Illumina reads together with MinION 2D reads, assembling them with SPAdes (v. 3.0). The resulting contig closed the last gap on the 6th plasmid.  
+    - Sequence coverage - done with SAMtools (v. 0.1.18) using short reads alignments to the assembly, which were generated with BWA (v. 0.7.9a).   
+    - check for base-calling and assebly errors by aligning short reads to assebled contigs - using SAMtools (v. 0.1.18). Correction by using the consensus of aligned reads.  
+    - annotation using Prokka (v. 1.10)  
+- Filogenetic analysis  
+    - a maximum likelihood phylogenetic tree, based on the core genome of *E. facium* E745 and an additional 72 *E. facium* strains - using ParSNP, with settings -c (forcing inclusion of all genome sequences) and -x (enabling recombination detection and filtering).
+    - visualize phylogenetic tree with MEGA (v. 7.0.26)
 - Transcriptomics:  
   
 ### Organization of new data  
