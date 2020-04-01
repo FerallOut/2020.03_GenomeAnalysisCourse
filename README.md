@@ -20,7 +20,7 @@ The genome is available from NCBI Genbank (**CP014529 - CP014535**). The availab
   
 - this is the resulting directory tree:  
   
-![GitHub Logo](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/organiz_dir_tree2.png)  
+![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/organiz_dir_tree2.png)  
 <!-- ![](images/long_data_dir_tree2.png) -->  
 *** 
 
