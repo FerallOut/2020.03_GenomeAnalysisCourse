@@ -5,6 +5,9 @@
 ./0directory_tree.sh path_to_where_you_want_the_new_folder project_name  
   
 - this is the resulting directory path:  
+![](./images/organiz_dir_tree.png) 
+
+![GitHub Logo](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/long_data_dir_tree1.png)
 
 project_name
 |- doc/            		documentation for the data, type, origin, dates
