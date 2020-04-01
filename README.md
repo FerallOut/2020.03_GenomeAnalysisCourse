@@ -12,33 +12,64 @@ The genome is available from NCBI Genbank (**CP014529 - CP014535**). The availab
 ![directory_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/short_data_dir_tree.png)  
   
 ### Extracting information from paper  
-- Genomics:  
-    - sequencing:  
-        - short reads: Illumina HiSew 100 bp pair-end  
-        - long reads: Pacific Biosciences RS II SMRT  
-        - long reads: MinION with R7 flowcell   
-    - genomic assembly of corrected PacBio reads: Celera (v. 8.1)
-        > corrected with what?  
-    - correct the assembly: align Illumina reads with BWA (v. 0.7.9a)  
-        - indexing with default parameters  
-        - aligning with BWA-MEM algorithm and *-M* option  
-    - QC on the 15 resulting contigs:  
-        - 1 covers the entire 2.77 Mbp chromosome  
-        - discard low-coverage contigs  
-        - remain 10 contig:  
-            - 5 circular plasmids   
-            - 5 non-overlapping contigs:  
-                - aligning against the NCBI Genbank -> they are part of the pMG1 *E. faecium* plasmid  
-                > is it a plasmid used for creating the library? Used for cloning?  
-                - to close the 6th plasmid, they did gap-spanning PCR and sequencing. This closed most gaps, except one. Afterwards they did an assebly of Illumina reads together with MinION 2D reads, assembling them with SPAdes (v. 3.0). The resulting contig closed the last gap on the 6th plasmid.  
-    - Sequence coverage - done with SAMtools (v. 0.1.18) using short reads alignments to the assembly, which were generated with BWA (v. 0.7.9a).   
-    - check for base-calling and assebly errors by aligning short reads to assebled contigs - using SAMtools (v. 0.1.18). Correction by using the consensus of aligned reads.  
-    - annotation using Prokka (v. 1.10)  
-- Filogenetic analysis  
-    - a maximum likelihood phylogenetic tree, based on the core genome of *E. facium* E745 and an additional 72 *E. facium* strains - using ParSNP, with settings -c (forcing inclusion of all genome sequences) and -x (enabling recombination detection and filtering).
-    - visualize phylogenetic tree with MEGA (v. 7.0.26)
-- Transcriptomics:  
+#### Genomics:   
+- DNA-seq:  
+    - short reads: Illumina HiSew 100 bp pair-end  
+    - long reads: Pacific Biosciences RS II SMRT  
+    - long reads: MinION with R7 flowcell   
+- genomic assembly of corrected PacBio reads: Celera (v. 8.1)
+    > corrected with what?  
+- correct the assembly: align Illumina reads with BWA (v. 0.7.9a)  
+    - indexing with default parameters  
+    - aligning with BWA-MEM algorithm and *-M* option  
+- QC on the 15 resulting contigs:  
+    - 1 covers the entire chromosome 
+        - 2.77 Mbp or 2.765.010 nt
+    - discard low-coverage contigs  
+    - remain 10 contig:  
+        - 5 circular plasmids   
+        - 5 non-overlapping contigs:  
+            - aligning against the NCBI Genbank -> they are part of the pMG1 *E. faecium* plasmid  
+            > is it a plasmid used for creating the library? Used for cloning?  
+            - to close the 6th plasmid, they did gap-spanning PCR and sequencing. This closed most gaps, except one. Afterwards they did an assebly of Illumina reads together with MinION 2D reads, assembling them with SPAdes (v. 3.0). The resulting contig closed the last gap on the 6th plasmid.  
+        - so in total 6 plasmids (9.3 kbp - 223.7 kbp)  
+- Sequence coverage - done with SAMtools (v. 0.1.18) using short reads alignments to the assembly, which were generated with BWA (v. 0.7.9a).   
+- check for base-calling and assebly errors by aligning short reads to assebled contigs - using SAMtools (v. 0.1.18). Correction by using the consensus of aligned reads.  
+- annotation using Prokka (v. 1.10)   
+    - 3 095 predicted coding sequences  
   
+#### Filogenetic analysis  
+- a maximum likelihood phylogenetic tree, based on the core genome of *E. facium* E745 and an additional 72 *E. facium* strains - using ParSNP, with settings -c (forcing inclusion of all genome sequences) and -x (enabling recombination detection and filtering).
+- visualize phylogenetic tree with MEGA (v. 7.0.26)  
+    - *E. faecium* is part of clade A-1 strain  
+- antibiotic resistance genes were identified with ResFinder.
+    - a pathogenicity island, with *esp* gene (involved in biofilm formation and infection)  
+    - vancomycin resistance genes are:
+        - of *vanA* type and are carried on the 32.4 kbp plasmid pE745-2.  
+        - the trimethoprim resistance gene *dfrG* on plasmid pE745-6.  
+        - macrolide resistance gene *msrC* encoded on the chromosome  
+  
+#### Transcriptomics:  
+- RNA-seq: 100 bp paired end reads on Illumina HiSeq 2500  
+- analyse with Rockhopper, default settings.  
+    - 27.8% of genes were differentially expressed between the 2 growth conditions  
+    - among the most upregulated genes when *E. faecium* grows in serum is a gene cluster with a role in purine biosynthesis  
+    
+#### Transposon mutant library:    
+- Tn-seq:  
+    - Illumina HiSeq 2500  
+- analysis: 
+    - sequences split on Galaxy platform  
+    - 16-mer were mapped to the E745 genome with Bowtie 2.  
+    - results were sorted and counted by IGV using a 25-nucleotide window and then summed over the gene. Read mapping to the final 10% of a gene were discarded as these insertions may not inactivate gene function.  
+    > what does this mean?  
+    - read counts per gene were then normalized to the total nr of reads that mapped to the genome in each replicate.
+        - RPKM (reads per klobase per million input reads) = (nr of reads mapped to a gene x 10^6)/(total mapped input reads in the sample x gene length in kbp) 
+    - statistical analysis done with Cyber-T (BH corrected p-value was < 0.05 and the difference in abundance of the transposon mutant during growth in BHI and serum was >2)  
+    - upregulated in serum are genes involved in *de novo* nucleotide biosynthesis (e.g. *pyrK_2*, *pyrF*, *purD*, *purH*) and a gene encoding an phosphotransferase system subunit (*manY_2*) - carbohydrate metabolism.  
+        
+            
+            
 ### Organization of new data  
   
 - In order to keep the project organized, I have decided on the types of files that I will have and on the organizational framework of the project.  
