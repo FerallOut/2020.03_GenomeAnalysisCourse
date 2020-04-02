@@ -99,7 +99,7 @@ The script for each step and each software goes into a folder with its name in *
 *** 
 
 ### Workflow  
-![Workflow_plan_GA.png](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/Workflow_plan_GA.png)  
+![Workflow_plan_GA.png](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/Workflow_plan_GA.png)    
 1. Genome assembly of long reads (PacBio)  
     - use **Canu** and **SPAdes**, each with various parameters     
 2. Quality control of the short DNA reads (Illumina)  
