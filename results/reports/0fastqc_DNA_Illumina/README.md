@@ -4,16 +4,16 @@
 `zcat E745-1.L500_SZAXPI015146-56_1_clean.fq.gz | head -n 10`  
   
 >@FCC171FACXX:2:1101:2120:2201#CTTCCTCC/1
-TCCCATCTGTTTCTATTATACATAATCAACTTTTAAATAGCTACCTTTTTTTCATAATTTTTTTAAAAAAATGAAAGTTATCTAAGGTTA
-\+
+TCCCATCTGTTTCTATTATACATAATCAACTTTTAAATAGCTACCTTTTTTTCATAATTTTTTTAAAAAAATGAAAGTTATCTAAGGTTA  
+\+  
 bbbeeeeegggggiiiiiiiiiihiihihiiiiihiiighiiiiiiiiiiihihihiiiiiiiggggdeccccccbcccddccecccccc  
   
 `zcat E745-1.L500_SZAXPI015146-56_1_clean.fq.gz | head -n 10`  
   
->@FCC171FACXX:2:1101:2120:2201#CTTCCTCC/2
-TAATGCAATCTCTGTGGAATTTTCGAAAGATTTATTTTTTTAATACAGTCTCAATATAACTATTCAAACATAAAATAACGTTATTTGATT
-\+
-bbbeeeeegggggighhiihiiihhehhiffghhhiiiiiifhhfhhhhheghihihihiihiihiiifgfdgeeeeeccddcccc_cbb  
+>@FCC171FACXX:2:1101:2120:2201#CTTCCTCC/2  
+TAATGCAATCTCTGTGGAATTTTCGAAAGATTTATTTTTTTAATACAGTCTCAATATAACTATTCAAACATAAAATAACGTTATTTGATT  
+\+  
+bbbeeeeegggggighhiihiiihhehhiffghhhiiiiiifhhfhhhhheghihihihiihiihiiifgfdgeeeeeccddcccc_cbb   
 
     - structure:  
         1. Header - unique identifier  
@@ -50,7 +50,8 @@ module load FastQC`
 ### The quality of the reads in the 2 files:
 
 - the reads have passed all the QC modules without triggering any warning or alert  
-- for file 1 (E745-1.L500_SZAXPI015146-56_1_clean.fq.gz), **base quality** varies between 28 and 41, showing that the reads have a high quality. For file 2 (E745-1.L500_SZAXPI015146-56_2_clean.fq.gz), base quality varies a lot more, the overall base quality being between 2 and 41. In both cases, there is an overall tendency for base quality to drop towards the end of the reads. The plot didn't trigger a warning because the lower quantile is not < 10 nor is the median < 25.
+- for file 1 (E745-1.L500_SZAXPI015146-56_1_clean.fq.gz), **base quality** varies between 28 and 41, showing that the reads have a high quality. For file 2 (E745-1.L500_SZAXPI015146-56_2_clean.fq.gz), base quality varies a lot more, the overall base quality being between 2 and 41. In both cases, there is an overall tendency for base quality to drop towards the end of the reads. The plot didn't trigger a warning because the lower quantile is not < 10 nor is the median < 25.  
+  
 ![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_1base_qual.png)  
 
 - overall: 
@@ -62,12 +63,21 @@ module load FastQC`
     - all sequences have a length of 90 bp; 
     - no **overrepresented sequences** 
     - **sequence duplication levels** shows that most of the DNA sequences are unique (~83% and ~84% respectively);
-    - no **adapter sequences** were identified in the reads.
+    - no **adapter sequences** were identified in the reads.  
+  
 ![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_2tile_qual.png)    
+  
 ![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_3seq_qual.png)     
+  
 ![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_4base_content.png)     
-![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_5cg_content.png)     
+  
+![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_5cg_content.png)      
+  
 ![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_6base_n_content.png)     
-![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_7length.png)     
+  
+![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_7length.png)      
+  
 ![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_8duplication.png)     
+  
 ![New_dir_tree](https://github.com/FerallOut/2020.03_GenomeAnalysisCourse/blob/master/notebooks/images/fastqc_Illumina_DNA_9adapters.png)     
+  
