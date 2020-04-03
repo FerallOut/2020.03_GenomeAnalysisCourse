@@ -1,0 +1,11 @@
+PASS	Basic Statistics	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
+PASS	Per base sequence quality	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
+PASS	Per tile sequence quality	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
+PASS	Per sequence quality scores	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
+PASS	Per base sequence content	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
+PASS	Per sequence GC content	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
+PASS	Per base N content	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
+PASS	Sequence Length Distribution	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
+PASS	Sequence Duplication Levels	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
+PASS	Overrepresented sequences	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
+PASS	Adapter Content	E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
