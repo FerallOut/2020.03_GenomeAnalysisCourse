@@ -15,37 +15,39 @@ TAATGCAATCTCTGTGGAATTTTCGAAAGATTTATTTTTTTAATACAGTCTCAATATAACTATTCAAACATAAAATAACG
 \+  
 bbbeeeeegggggighhiihiiihhehhiffghhhiiiiiifhhfhhhhheghihihihiihiihiiifgfdgeeeeeccddcccc_cbb   
 
-    - structure:  
-        1. Header - unique identifier  
-            - starts with @  
-            - Instrument ID (FCC171FACXX)  
-            - Flowcell Lane (2)
-            - tile number within the flowcell lane (1101)
-            - X-position (2120)
-            - Y-position (2201)
-            - #CTTCCTCC - index number for a multiplexed sample
-            - /1 - shows the member of a pair in a pair-read
-        2. Base calls   
-        3. Mid-line - starts with + usually empty
-        4. Quality scores - per base signal
+- structure:  
+    1. Header - unique identifier  
+        - starts with @  
+        - Instrument ID (FCC171FACXX)  
+        - Flowcell Lane (2)
+        - tile number within the flowcell lane (1101)
+        - X-position (2120)
+        - Y-position (2201)
+        - #CTTCCTCC - index number for a multiplexed sample
+        - /1 - shows the member of a pair in a pair-read
+    2. Base calls   
+    3. Mid-line - starts with + usually empty
+    4. Quality scores - per base signal
      
-     > each member of a pair-read is in a separate file, with prefix "1" or "2".  
+> each member of a pair-read is in a separate file, with prefix "1" or "2".  
 - check files:  
-`zcat E745-1.L500_SZAXPI015146-56_2_clean.fq.gz | grep @ | wc -l`  
-    > each file has 1666667 reads.
+`zcat E745-1.L500_SZAXPI015146-56_2_clean.fq.gz | grep @ | wc -l`   
+> each file has 1666667 reads.
 
 ***  
   
 ### Commands:  
   
-`module load bioinfo-tools  
-module load FastQC`  
+`module load bioinfo-tools`   
+`module load FastQC`  
   
 `fastqc --outdir=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/0fastqc_DNA_Illumina /home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/Illumina/E745-1.L500_SZAXPI015146-56_*`  
 
-- I obtained 2 reports that can be visualized with:  
+- Since the commands work, I put them in a bash file (**1_DNA_fastqc_Illumina.sh**) and run them on Uppmax. I obtained 2 reports that can be visualized with:  
   
 `firefox E745-1.L500_SZAXPI015146-56_*.html &`  
+  
+***  
   
 ### The quality of the reads in the 2 files:
 
