@@ -11,7 +11,8 @@ module purge
 module load bioinfo-tools
 module load FastQC
 
-# Your commands
+# run 'fastqc' on '.fq.gz' files, to get the quality report on the Illumina DNA pair-end reads
+# fastqc --outdir=path_to_output_folder file_with_reads
 
 extension=fq.gz
 source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/Illumina/
