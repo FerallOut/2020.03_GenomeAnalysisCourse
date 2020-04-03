@@ -18,10 +18,10 @@ extension=fq.gz
 source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/Illumina/
 output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/1fastqc_DNA_Illumina
 
-my_file=${source_files}/*.${extension}
+my_file=${source_files}*.${extension}
 
 for i in $my_file 			#to print one by one
 do
-   fastqc --outdir="$output_folder" "$my_file"
+   fastqc --outdir="$output_folder" $my_file
 done
 
