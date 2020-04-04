@@ -25,3 +25,4 @@ do
    fastqc --outdir="$output_folder" $my_file
 done
 
+mv *.out ${output_folder}
