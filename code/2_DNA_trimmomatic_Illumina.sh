@@ -19,13 +19,10 @@ output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/2trimm
 
 in_file1=E745-1.L500_SZAXPI015146-56_1_clean.fq.gz
 in_file2=E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
-out_file_1paired=E745-1.L500_SZAXPI015146-56_1_clean_trim_paired_1
-out_file_1unpaired=E745-1.L500_SZAXPI015146-56_1_clean_trim_unpaired_1
-out_file_2paired=E745-1.L500_SZAXPI015146-56_1_clean_trim_paired_2
-out_file_2unpaired=E745-1.L500_SZAXPI015146-56_1_clean_trim_unpaired_2
+out_file_1paired=E745-1.L500_SZAXPI015146-56_1_clean_trim_1P
+out_file_1unpaired=E745-1.L500_SZAXPI015146-56_1_clean_trim_1U
+out_file_2paired=E745-1.L500_SZAXPI015146-56_1_clean_trim_2P
+out_file_2unpaired=E745-1.L500_SZAXPI015146-56_1_clean_trim_2U
 
-for i in $my_file 			
-do
-   java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred33 -trimlog trimlog ${source_files}${in_file1} ${source_files}${in_file2} ${output_folder}${out_file_1paired} ${output_folder}${out_file_1unpaired} ${output_folder}${out_file_2paired} ${output_folder}${out_file_2unpaired} LEADING:10 TRAILING:10 SLIDINGWINDOW:4:10 MINLEN:50
-done
+   java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred64 -trimlog trimlog ${source_files}${in_file1} ${source_files}${in_file2} ${output_folder}${out_file_1paired} ${output_folder}${out_file_1unpaired} ${output_folder}${out_file_2paired} ${output_folder}${out_file_2unpaired} LEADING:10 TRAILING:10 SLIDINGWINDOW:4:10 MINLEN:50
 
