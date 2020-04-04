@@ -139,4 +139,10 @@ To think about:
 `module load trimmomatic`   
 `module help trimmomatic/0.36`  
 > Usage: java -jar $TRIMMOMATIC_HOME/trimmomatic.jar followed by options  
-  
+
+- made a script (**2_DNA_trimmomatic_Illumina.sh**) in the **code** folder.  
+
+- run script  
+`sbatch 2_DNA_trimmomatic_Illumina.sh` 
+> Submitted batch job 13148819  
+
