@@ -17,9 +17,11 @@ display_usage() {
 		display_usage
 		exit 1
 	fi 
+####################################
 
 # Spawning the directories
 mkdir -p $1/$2/{doc,data/raw_ext,data/raw_int,data/metadata,code,notebooks,temp,scratch,logs,results/figures,results/reports,results/tables}
+####################################
 
 # Print the readme.md file to the right places
 struture="
@@ -48,4 +50,6 @@ project_name
 |
 |- readme.md			a readme file with this structure so future people can understand it
 "
+####################################
+
 echo "$struture" >> $1/$2/readme.md
