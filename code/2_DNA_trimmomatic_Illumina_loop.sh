@@ -28,11 +28,21 @@ out_file_basename=E745-1.L500_SZAXPI015146-56_clean.fq.gz
 
 slurm_out=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/2_DNA_trimmomatic_fastqc_DNA_Illumina/	# move "slurm.out" file to "results" folder 
 mkdir -p ${slurm_out}
+
+threshold_quality="10 15 20 25 28"
+min_len="25 50"
 ####################################
 
 # Code to run
 # !code bug: if you use -basein or -baseout, you need to put these options _before_ the explicit file names - even if this means putting the templated output files (via -baseout) before the explicit input files. 
 
-   java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred64 -trimlog ${output_folder}trimlog.txt -baseout ${output_folder}${out_file_basename} ${source_files}${in_file1} ${source_files}${in_file2} LEADING:10 TRAILING:10 SLIDINGWINDOW:4:10 MINLEN:25
+for threshold in ${threshold_quality}
+do
+  for len in ${min_len}
+  do
+    ${output_folder}$trim_Q${threshold}_Len${len}
+   java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred64 -trimlog ${output_folder}trimlog.txt -baseout ${output_folder}${out_file_basename}_Q${threshold}_Len${len} ${source_files}${in_file1} ${source_files}${in_file2} LEADING:${threshold} TRAILING:${threshold} SLIDINGWINDOW:4:10 MINLEN:${len}
+  done
+done
 
 mv *.out ${slurm_out}
