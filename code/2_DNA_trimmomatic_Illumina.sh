@@ -26,13 +26,13 @@ in_file1=E745-1.L500_SZAXPI015146-56_1_clean.fq.gz
 in_file2=E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
 out_file_basename=E745-1.L500_SZAXPI015146-56_clean.fq.gz
 
-slurm_out=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/2_DNA_trimmomatic_fastqc_DNA_Illumina/	# move "slurm.out" file to "results" folder 
+slurm_out=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/2_DNA_trimmomatic_fastqc_DNA_Illumina/	# the path to the folder where "slurm.out" file will be moved to ("results" folder)
 mkdir -p ${slurm_out}
 ####################################
 
 # Code to run
 # !code bug: if you use -basein or -baseout, you need to put these options _before_ the explicit file names - even if this means putting the templated output files (via -baseout) before the explicit input files. 
 
-   java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred64 -trimlog ${output_folder}trimlog.txt -baseout ${output_folder}${out_file_basename} ${source_files}${in_file1} ${source_files}${in_file2} LEADING:10 TRAILING:10 SLIDINGWINDOW:4:10 MINLEN:25
+   java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred64 -trimlog ${output_folder}trimlog.txt -baseout ${output_folder}${out_file_basename} ${source_files}${in_file1} ${source_files}${in_file2} LEADING:10 SLIDINGWINDOW:4:10 MINLEN:25	# dropped TRAILING 10
 
-mv *.out ${slurm_out}
+mv *.out ${slurm_out}	# move "slurm.out" file to "results" folder

@@ -26,7 +26,7 @@ in_file1=E745-1.L500_SZAXPI015146-56_1_clean.fq.gz
 in_file2=E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
 out_file_basename=E745-1.L500_SZAXPI015146-56_clean.fq.gz
 
-slurm_out=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/2_DNA_trimmomatic_fastqc_DNA_Illumina/	# move "slurm.out" file to "results" folder 
+slurm_out=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/2_DNA_trimmomatic_fastqc_DNA_Illumina/	# the path to the folder where "slurm.out" file will be moved to ("results" folder)
 mkdir -p ${slurm_out}
 
 threshold_quality="10 15 20 25 28"
@@ -41,8 +41,8 @@ do
   for len in ${min_len}
   do
     ${output_folder}$trim_Q${threshold}_Len${len}
-   java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred64 -trimlog ${output_folder}trimlog.txt -baseout ${output_folder}${out_file_basename}_Q${threshold}_Len${len} ${source_files}${in_file1} ${source_files}${in_file2} LEADING:${threshold} TRAILING:${threshold} SLIDINGWINDOW:4:10 MINLEN:${len}
+   java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred64 -trimlog ${output_folder}trimlog.txt -baseout ${output_folder}${out_file_basename}_Q${threshold}_Len${len} ${source_files}${in_file1} ${source_files}${in_file2} LEADING:${threshold} SLIDINGWINDOW:4:10 MINLEN:${len}                       #dropped TRAILING 10
   done
 done
 
-mv *.out ${slurm_out}
+mv *.out ${slurm_out}    # move "slurm.out" file to "results" folder
