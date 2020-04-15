@@ -19,7 +19,7 @@ module load trimmomatic
 
 # Input sources
 source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/Illumina/
-output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_trimmomatic_Illumina/		#output saved in "scratch" folder
+output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_trimmomatic_Illumina_2/		#output saved in "scratch" folder
 mkdir -p ${output_folder}		# creates the output folders if they don't exist yet
 
 in_file1=E745-1.L500_SZAXPI015146-56_1_clean.fq.gz
