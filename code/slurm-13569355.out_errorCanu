@@ -52,7 +52,7 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
 --
 -- Found untrimmed raw PacBio CLR reads in the input files.
 --
--- Generating assembly 'canu_pacbio' in '/domus/h1/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio':
+-- Generating assembly 'canu_pacbio' in '/domus/h1/miba8458/2020.03_GenomeAnalysisCourse/scratch/2x_DNA_canu_PacBio':
 --    - correct raw reads.
 --    - trim corrected reads.
 --    - assemble corrected and trimmed reads.
@@ -76,16 +76,16 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
 -- BEGIN CORRECTION
 --
 ----------------------------------------
--- Starting command on Wed Apr 15 15:54:12 2020 with 21787.759 GB free disk space
+-- Starting command on Thu Apr 16 19:48:20 2020 with 21172.562 GB free disk space
 
     cd .
     ./canu_pacbio.seqStore.sh \
     > ./canu_pacbio.seqStore.err 2>&1
 
--- Finished on Wed Apr 15 15:54:39 2020 (27 seconds) with 21787.28 GB free disk space
+-- Finished on Thu Apr 16 19:48:49 2020 (29 seconds) with 21172.4 GB free disk space
 ----------------------------------------
 ----------------------------------------
--- Starting command on Wed Apr 15 15:54:39 2020 with 21787.28 GB free disk space
+-- Starting command on Thu Apr 16 19:48:49 2020 with 21172.4 GB free disk space
 
     cd .
     /sw/bioinfo/canu/2.0/rackham/Linux-amd64/bin/sqStoreDumpMetaData \
@@ -97,10 +97,10 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
     2> ./canu_pacbio.seqStore/readlengths-cor.err 
     
 
--- Finished on Wed Apr 15 15:54:39 2020 (in the blink of an eye) with 21787.279 GB free disk space
+-- Finished on Thu Apr 16 19:48:49 2020 (furiously fast) with 21172.399 GB free disk space
 ----------------------------------------
 ----------------------------------------
--- Starting command on Wed Apr 15 15:54:39 2020 with 21787.279 GB free disk space
+-- Starting command on Thu Apr 16 19:48:49 2020 with 21172.399 GB free disk space
 
     cd .
     /sw/bioinfo/canu/2.0/rackham/Linux-amd64/bin/sqStoreDumpMetaData \
@@ -111,7 +111,7 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
     2> ./canu_pacbio.seqStore/readlengths-cor.err 
     
 
--- Finished on Wed Apr 15 15:54:39 2020 (like a bat out of hell) with 21787.279 GB free disk space
+-- Finished on Thu Apr 16 19:48:49 2020 (fast as lightning) with 21172.399 GB free disk space
 ----------------------------------------
 --
 -- In sequence store './canu_pacbio.seqStore':
@@ -174,13 +174,13 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
 --    
 -- New report created.
 ----------------------------------------
--- Starting command on Wed Apr 15 15:54:39 2020 with 21787.279 GB free disk space
+-- Starting command on Thu Apr 16 19:48:49 2020 with 21172.399 GB free disk space
 
     cd correction/0-mercounts
     ./meryl-configure.sh \
     > ./meryl-configure.err 2>&1
 
--- Finished on Wed Apr 15 15:54:40 2020 (one second) with 21787.274 GB free disk space
+-- Finished on Thu Apr 16 19:48:50 2020 (one second) with 21172.399 GB free disk space
 ----------------------------------------
 --  segments   memory batches
 --  -------- -------- -------
@@ -197,12 +197,12 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
 --
 -- Running jobs.  First attempt out of 2.
 ----------------------------------------
--- Starting 'meryl' concurrent execution on Wed Apr 15 15:54:40 2020 with 21787.271 GB free disk space (1 processes; 5 concurrently)
+-- Starting 'meryl' concurrent execution on Thu Apr 16 19:48:50 2020 with 21172.399 GB free disk space (1 processes; 5 concurrently)
 
     cd correction/0-mercounts
     ./meryl-count.sh 1 > ./meryl-count.000001.out 2>&1
 
--- Finished on Wed Apr 15 15:56:16 2020 (96 seconds) with 21782.517 GB free disk space
+-- Finished on Thu Apr 16 19:50:33 2020 (103 seconds) with 21170.84 GB free disk space
 ----------------------------------------
 -- Found 1 Kmer counting (meryl) outputs.
 -- No change in report.
@@ -211,12 +211,12 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
 --
 -- Running jobs.  First attempt out of 2.
 ----------------------------------------
--- Starting 'meryl' concurrent execution on Wed Apr 15 15:56:16 2020 with 21782.517 GB free disk space (1 processes; 5 concurrently)
+-- Starting 'meryl' concurrent execution on Thu Apr 16 19:50:33 2020 with 21170.84 GB free disk space (1 processes; 5 concurrently)
 
     cd correction/0-mercounts
     ./meryl-process.sh 1 > ./meryl-process.000001.out 2>&1
 
--- Finished on Wed Apr 15 15:57:29 2020 (73 seconds) with 21780.079 GB free disk space
+-- Finished on Thu Apr 16 19:51:48 2020 (75 seconds) with 21170.006 GB free disk space
 ----------------------------------------
 -- Meryl finished successfully.  Kmer frequency histogram:
 --
@@ -290,7 +290,7 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
 --
 -- Running jobs.  First attempt out of 2.
 ----------------------------------------
--- Starting 'cormhap' concurrent execution on Wed Apr 15 15:57:29 2020 with 21780.057 GB free disk space (7 processes; 2 concurrently)
+-- Starting 'cormhap' concurrent execution on Thu Apr 16 19:51:48 2020 with 21170.003 GB free disk space (7 processes; 2 concurrently)
 
     cd correction/1-overlapper
     ./precompute.sh 1 > ./precompute.000001.out 2>&1
@@ -301,7 +301,7 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
     ./precompute.sh 6 > ./precompute.000006.out 2>&1
     ./precompute.sh 7 > ./precompute.000007.out 2>&1
 
--- Finished on Wed Apr 15 17:52:41 2020 (6912 seconds) with 21631.948 GB free disk space
+-- Finished on Thu Apr 16 22:02:51 2020 (7863 seconds) with 21063.224 GB free disk space
 ----------------------------------------
 -- All 7 mhap precompute jobs finished successfully.
 -- No change in report.
@@ -310,7 +310,7 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
 --
 -- Running jobs.  First attempt out of 2.
 ----------------------------------------
--- Starting 'cormhap' concurrent execution on Wed Apr 15 17:52:41 2020 with 21631.948 GB free disk space (13 processes; 2 concurrently)
+-- Starting 'cormhap' concurrent execution on Thu Apr 16 22:02:51 2020 with 21063.224 GB free disk space (13 processes; 2 concurrently)
 
     cd correction/1-overlapper
     ./mhap.sh 1 > ./mhap.000001.out 2>&1
@@ -327,37 +327,37 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
     ./mhap.sh 12 > ./mhap.000012.out 2>&1
     ./mhap.sh 13 > ./mhap.000013.out 2>&1
 
--- Finished on Wed Apr 15 18:00:38 2020 (477 seconds) with 21626.644 GB free disk space
+-- Finished on Thu Apr 16 22:11:15 2020 (504 seconds) with 21039.573 GB free disk space
 ----------------------------------------
 --
 -- Mhap overlap jobs failed, retry.
 --   job correction/1-overlapper/results/000001.ovb FAILED.
 --   job correction/1-overlapper/results/000002.ovb FAILED.
---   job correction/1-overlapper/results/000003.ovb FAILED.
 --   job correction/1-overlapper/results/000004.ovb FAILED.
---   job correction/1-overlapper/results/000005.ovb FAILED.
+--   job correction/1-overlapper/results/000007.ovb FAILED.
+--   job correction/1-overlapper/results/000008.ovb FAILED.
 --
 -- No change in report.
 --
 -- Running jobs.  Second attempt out of 2.
 ----------------------------------------
--- Starting 'cormhap' concurrent execution on Wed Apr 15 18:00:38 2020 with 21626.644 GB free disk space (5 processes; 2 concurrently)
+-- Starting 'cormhap' concurrent execution on Thu Apr 16 22:11:15 2020 with 21039.573 GB free disk space (5 processes; 2 concurrently)
 
     cd correction/1-overlapper
     ./mhap.sh 1 > ./mhap.000001.out 2>&1
     ./mhap.sh 2 > ./mhap.000002.out 2>&1
-    ./mhap.sh 3 > ./mhap.000003.out 2>&1
     ./mhap.sh 4 > ./mhap.000004.out 2>&1
-    ./mhap.sh 5 > ./mhap.000005.out 2>&1
+    ./mhap.sh 7 > ./mhap.000007.out 2>&1
+    ./mhap.sh 8 > ./mhap.000008.out 2>&1
 
--- Finished on Wed Apr 15 18:05:13 2020 (275 seconds) with 21623.831 GB free disk space
+-- Finished on Thu Apr 16 22:15:19 2020 (244 seconds) with 21046.143 GB free disk space
 ----------------------------------------
 --
 -- Mhap overlap jobs failed, tried 2 times, giving up.
 --   job correction/1-overlapper/results/000001.ovb FAILED.
 --   job correction/1-overlapper/results/000002.ovb FAILED.
---   job correction/1-overlapper/results/000003.ovb FAILED.
---   job correction/1-overlapper/results/000005.ovb FAILED.
+--   job correction/1-overlapper/results/000004.ovb FAILED.
+--   job correction/1-overlapper/results/000008.ovb FAILED.
 --
 
 ABORT:
@@ -365,4 +365,4 @@ ABORT: Canu 2.0
 ABORT: Don't panic, but a mostly harmless error occurred and Canu stopped.
 ABORT: Try restarting.  If that doesn't work, ask for help.
 ABORT:
-slurmstepd: error: Detected 539 oom-kill event(s) in step 13547577.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
+slurmstepd: error: Detected 415 oom-kill event(s) in step 13569355.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
