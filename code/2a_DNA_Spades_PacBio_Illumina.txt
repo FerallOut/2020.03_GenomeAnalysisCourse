@@ -3,21 +3,19 @@
 #SBATCH -A g2020008		# code of the project
 #SBATCH -p core			# core/ node
 #SBATCH -n 1			# nr of cores/ nodes
-#SBATCH -t 06:30:00		# time needed (dd-hh:mm:ss)
-#SBATCH -J Canu_DNA_PacBio		# a name for your job
+#SBATCH -t 04:00:00		# time needed (dd-hh:mm:ss)
+#SBATCH -J Spades_DNA	# a name for your job
 ####################################
 
 # Load modules
-module purge
+#module purge
 module load bioinfo-tools
-module load canu
+module load spades
 ####################################
 
-# run 'canu' on PacBio reads, to assemble the genome
+# run 'spades' on DNA reads, to assemble the genome
 
-# canu -p name_prefix_for_resulting_files -d output_folder \
-# genomeSize=(nr_in_milion)m \
-# -pacbio-raw files_with_reads
+# spades.py [options] -o <output_dir>
 ####################################
 
 # Input sources
