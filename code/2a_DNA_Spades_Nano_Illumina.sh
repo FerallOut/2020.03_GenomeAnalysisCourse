@@ -24,7 +24,7 @@ input_Illumina=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_
 input_Nanopore=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/Nanopore/
             # just 1 file: E745_all.fasta.gz
             # '--nanopore' specifies this file type 
-output_folder_name=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_spades_Nano_Illumina
+output_folder_name=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina
 ####################################
 
 # Code to run

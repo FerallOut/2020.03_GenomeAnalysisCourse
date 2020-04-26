@@ -23,7 +23,7 @@ input_Illumina=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_
             # forward and reverse file names: *_1_clean.fq.gz and *_2_clean.fq.gz
 input_PacBio=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/PacBio/
             # file names: *.subreads.fastq.gz
-output_folder_name=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_spades_PacBio_Illumina
+output_folder_name=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2b_DNA_spades_PacBio_Illumina
 ####################################
 
 # Code to run

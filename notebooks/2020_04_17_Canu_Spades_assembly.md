@@ -1,4 +1,4 @@
-# Wed, 2020-04-15
+# 20Wed, 2020-04-15
 
 to do:  
 - [x] start the assembly with canu
@@ -9,12 +9,12 @@ to do:
 - [x] understand the results
 - [x] save daily log 
 - [x] push changes to git  
-***  
+***
 - log in to Uppmax: ```ssh -AX username@rackham.uppmax.uu.se```  
 - project number: **g2020008**  
 - where to run analyses: **/home/username/**  
 - where is the raw data: **/proj/g2020008/nobackup/private/1_Zhang_2017/**   
-***  
+***
 CANU
 -- Generating assembly 'canu_pacbio' in '/domus/h1/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio':
 --    - correct raw reads.
@@ -34,7 +34,7 @@ source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_ra
 output_folder_name=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio
 
 6 '.fastq.gz' files 
-*** 
+***
 outcome
 files:
   * <prefix>.report - status messages, execution logs, Most of the analysis 
@@ -50,7 +50,7 @@ You can use the k-mer corrected read histograms with tools like GenomeScope to e
     * <prefix>.unassembled.fasta - assembled sequence where unassembled are the leftover pieces
 
 ***
-    
+
 SPADES
 https://github.com/ablab/spades
     
@@ -86,6 +86,8 @@ SPAdes added support for taking short and long reads as inputs in SPAdes 3.0
 ********************
 SPAdes stores all output files in <output_dir> , which is set by the user.
 
+http://cab.spbu.ru/files/release3.12.0/manual.html 
+
     <output_dir>/corrected/ directory contains reads corrected by BayesHammer in *.fastq.gz files; if compression is disabled, reads are stored in uncompressed *.fastq files
     <output_dir>/scaffolds.fasta contains resulting scaffolds (recommended for use as resulting sequences)
     <output_dir>/contigs.fasta contains resulting contigs
@@ -94,5 +96,6 @@ SPAdes stores all output files in <output_dir> , which is set by the user.
     <output_dir>/contigs.paths contains paths in the assembly graph corresponding to contigs.fasta (see details below)
     <output_dir>/scaffolds.paths contains paths in the assembly graph corresponding to scaffolds.fasta (see details below)
 
-        
+
+A scaffold is a construct of multiple contigs bridged by poly N characters. For downstream analysis, use 'scaffolds.fasta'
         
