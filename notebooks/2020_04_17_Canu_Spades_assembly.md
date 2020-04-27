@@ -45,9 +45,8 @@ files:
         * the summary of contig lengths.
 
 You can use the k-mer corrected read histograms with tools like GenomeScope to estimate heterozygosity and genome size. In particular, histograms with more than 1 peak likely indicate a heterozygous genome. See the Canu FAQ for some suggested parameters.
-    * <prefix>.contigs.fasta - assembled sequence where contigs are the primary output
-    * <prefix>.unitigs.fasta - assembled sequence where unitigs are the primary output split at alternate paths
-    * <prefix>.unassembled.fasta - assembled sequence where unassembled are the leftover pieces
+
+* <prefix>.contigs.fasta - assembled sequence where contigs are the primary output
 
 ***
 

@@ -1,13 +1,7 @@
-~~~gfm
-```mermaid
-stateDiagram
-    [*] --> Still
-    Still --> [*]
+| Assembler        | No. contigs | NGA50 (bp) | Largest (bp) | Total (bp) | Genome fraction (%) | No. of misassemblies | No. of complete genes |
+| ---------------- | ----------- | ---------- | ------------ | ---------- | ------------------- | -------------------- | --------------------- |
+| Canu_Quast_ref   |             |            |              |            |                     |                      |                       |
+| Canu_Quast_noref |             |            |              |            |                     |                      |                       |
+| SPAdes           |             |            |              |            |                     |                      |                       |
 
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
-```
-~~~
-
+Comparison of assemblies of E.fXXXXXXX (for contigs >+??? 500 bp)  
