@@ -1,4 +1,4 @@
-/sw/bioinfo/quast/4.5.4/rackham/bin/quast.py /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/scaffolds.fasta -R /home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz -o /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina
+/sw/bioinfo/quast/4.5.4/rackham/bin/quast.py /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/contigs.fasta -R /home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz -o /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina
 
 Version: 4.5.4
 
@@ -7,7 +7,7 @@ System information:
   Python version: 2.7.6
   CPUs number: 20
 
-Started: 2020-04-26 19:24:21
+Started: 2020-04-27 09:59:24
 
 Logging to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/quast.log
 NOTICE: Maximum number of threads is set to 5 (use --threads option to set it manually)
@@ -21,16 +21,16 @@ Reference:
 
 Contigs:
   Pre-processing...
-  /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/scaffolds.fasta ==> scaffolds
+  /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/contigs.fasta ==> contigs
 
-2020-04-26 19:24:26
+2020-04-27 09:59:27
 Running Basic statistics processor...
   Reference genome:
     GCF_000174395.2_ASM17439v2_genomic.fna, length = 3052572, num fragments = 4, GC % = 37.87
   Contig files: 
-    scaffolds
+    contigs
   Calculating N50 and L50...
-    scaffolds, N50 = 1740868, L50 = 1, Total length = 3147965, GC % = 37.67, # N's per 100 kbp =  402.83
+    contigs, N50 = 840748, L50 = 2, Total length = 3135284, GC % = 37.67, # N's per 100 kbp =  0.00
   Drawing Nx plot...
     saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/basic_stats/Nx_plot.pdf
   Drawing NGx plot...
@@ -39,23 +39,23 @@ Running Basic statistics processor...
     saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/basic_stats/cumulative_plot.pdf
   Drawing GC content plot...
     saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/basic_stats/GC_content_plot.pdf
-  Drawing scaffolds GC content plot...
-    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/basic_stats/scaffolds_GC_content_plot.pdf
-  Drawing Coverage histogram (bin size: 1x)...
+  Drawing contigs GC content plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/basic_stats/contigs_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 3x)...
     saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/basic_stats/coverage_histogram.pdf
-  Drawing scaffolds coverage histogram (bin size: 1x)...
-    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/basic_stats/scaffolds_coverage_histogram.pdf
+  Drawing contigs coverage histogram (bin size: 3x)...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/basic_stats/contigs_coverage_histogram.pdf
 Done.
 
-2020-04-26 19:24:31
+2020-04-27 09:59:31
 Running Contig analyzer...
-  scaffolds
-  Logging to files /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/contigs_reports/contigs_report_scaffolds.stdout and contigs_report_scaffolds.stderr...
+  contigs
+  Logging to files /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/contigs_reports/contigs_report_contigs.stdout and contigs_report_contigs.stderr...
   Aligning contigs to the reference
-  MUMmer plot saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/contigs_reports/scaffolds_mummerplot.html
+  MUMmer plot saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/contigs_reports/contigs_mummerplot.html
   Analysis is finished.
-  Gzipping /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/contigs_reports/nucmer_output/scaffolds.all_snps to reduce disk space usage...
-    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/contigs_reports/nucmer_output/scaffolds.all_snps.gz
+  Gzipping /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/contigs_reports/nucmer_output/contigs.all_snps to reduce disk space usage...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/contigs_reports/nucmer_output/contigs.all_snps.gz
   Creating total report...
     saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
   Transposed version of total report...
@@ -68,9 +68,9 @@ Running Contig analyzer...
     saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/contigs_reports/misassemblies_frcurve_plot.pdf
 Done.
 
-2020-04-26 19:25:29
+2020-04-27 10:00:12
 Running NA-NGA calculation...
-  scaffolds, Largest alignment = 231981, NA50 = 107748, NGA50 = 115967, LA50 = 10, LGA50 = 9
+  contigs, Largest alignment = 231981, NA50 = 87746, NGA50 = 107748, LA50 = 11, LGA50 = 10
   Drawing cumulative plot...
     saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/aligned_stats/cumulative_plot.pdf
   Drawing NAx plot...
@@ -79,25 +79,25 @@ Running NA-NGA calculation...
     saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/aligned_stats/NGAx_plot.pdf
 Done.
 
-2020-04-26 19:25:31
+2020-04-27 10:00:13
 Running Genome analyzer...
   NOTICE: No file with genes provided. Use the -G option if you want to specify it.
   NOTICE: No file with operons provided. Use the -O option if you want to specify it.
-  scaffolds
+  contigs
   Analysis is finished.
   Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
 Done.
 
 NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
 
-2020-04-26 19:25:32
+2020-04-27 10:00:15
 Creating large visual summaries...
 This may take a while: press Ctrl-C to skip this step..
   1 of 2: Creating Icarus viewers...
   2 of 2: Creating PDF with all tables and plots...
 Done
 
-2020-04-26 19:25:35
+2020-04-27 10:00:18
 RESULTS:
   Text versions of total report are saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/report.txt, report.tsv, and report.tex
   Text versions of transposed total report are saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
@@ -106,8 +106,8 @@ RESULTS:
   Icarus (contig browser) is saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/icarus.html
   Log saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3a_DNA_quast_onSpades_Nano_Illumina/quast.log
 
-Finished: 2020-04-26 19:25:35
-Elapsed time: 0:01:14.661137
+Finished: 2020-04-27 10:00:18
+Elapsed time: 0:00:53.381146
 NOTICEs: 4; WARNINGs: 0; non-fatal ERRORs: 0
 
 Thank you for using QUAST!

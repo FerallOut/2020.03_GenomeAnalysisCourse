@@ -1,0 +1,109 @@
+/sw/bioinfo/quast/4.5.4/rackham/bin/quast.py /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio/canu_pacbio.contigs.fasta -R /home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz -o /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio
+
+Version: 4.5.4
+
+System information:
+  OS: Linux-3.10.0-1062.18.1.el7.x86_64-x86_64-with-centos-7.7.1908-Core (linux_64)
+  Python version: 2.7.6
+  CPUs number: 20
+
+Started: 2020-04-27 10:09:57
+
+Logging to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/quast.log
+NOTICE: Maximum number of threads is set to 5 (use --threads option to set it manually)
+
+CWD: /domus/h1/miba8458/2020.03_GenomeAnalysisCourse/code
+Main parameters: 
+  Threads: 5, minimum contig length: 500, ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz ==> GCF_000174395.2_ASM17439v2_genomic
+
+Contigs:
+  Pre-processing...
+  /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio/canu_pacbio.contigs.fasta ==> canu_pacbio.contigs
+
+2020-04-27 10:09:59
+Running Basic statistics processor...
+  Reference genome:
+    GCF_000174395.2_ASM17439v2_genomic.fna, length = 3052572, num fragments = 4, GC % = 37.87
+  Contig files: 
+    canu_pacbio.contigs
+  Calculating N50 and L50...
+    canu_pacbio.contigs, N50 = 2775618, L50 = 1, Total length = 3166158, GC % = 37.73, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/basic_stats/GC_content_plot.pdf
+  Drawing canu_pacbio.contigs GC content plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/basic_stats/canu_pacbio.contigs_GC_content_plot.pdf
+Done.
+
+2020-04-27 10:10:02
+Running Contig analyzer...
+  canu_pacbio.contigs
+  Logging to files /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/contigs_reports/contigs_report_canu_pacbio-contigs.stdout and contigs_report_canu_pacbio-contigs.stderr...
+  Aligning contigs to the reference
+  MUMmer plot saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/contigs_reports/canu_pacbio-contigs_mummerplot.html
+  Analysis is finished.
+  Gzipping /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/contigs_reports/nucmer_output/canu_pacbio-contigs.all_snps to reduce disk space usage...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/contigs_reports/nucmer_output/canu_pacbio-contigs.all_snps.gz
+  Creating total report...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2020-04-27 10:11:20
+Running NA-NGA calculation...
+  canu_pacbio.contigs, Largest alignment = 209800, NA50 = 107749, NGA50 = 109973, LA50 = 11, LGA50 = 10
+  Drawing cumulative plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/aligned_stats/NGAx_plot.pdf
+Done.
+
+2020-04-27 10:11:21
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  canu_pacbio.contigs
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2020-04-27 10:11:23
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2020-04-27 10:11:25
+RESULTS:
+  Text versions of total report are saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/report.html
+  PDF version (tables and plots) is saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/report.pdf
+  Icarus (contig browser) is saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/icarus.html
+  Log saved to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_quast_onCanu_PacBio/quast.log
+
+Finished: 2020-04-27 10:11:25
+Elapsed time: 0:01:28.697099
+NOTICEs: 4; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
