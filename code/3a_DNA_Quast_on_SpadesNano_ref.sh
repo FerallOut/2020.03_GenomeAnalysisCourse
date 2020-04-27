@@ -26,5 +26,5 @@ reference_file=/home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_
 
 # Code to run
 quast.py ${input_Spades_Nano_Illumina} \
--r ${reference_file} \
+-R ${reference_file} \
 -o ${output_folder_name}
