@@ -10,7 +10,9 @@ Mummerplot canu assembly
 
 <img src="/home/ferall/Dropbox/0MSc_Bioinfo_Uppsala/Sem1_1MB462_Genome_Analysis/2020.03_GenomeAnalysisCourse/notebooks/images/3_mummer_Canu_Pac.png" alt="3_mummer_Canu_Pac" style="zoom:50%;" />
 
+Mummerplot spades assembly
 
+<img src="/home/ferall/Dropbox/0MSc_Bioinfo_Uppsala/Sem1_1MB462_Genome_Analysis/2020.03_GenomeAnalysisCourse/code/out.png" alt="out" style="zoom:50%;" />
 
-
+## BWA-pilon
 

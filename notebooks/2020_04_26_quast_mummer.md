@@ -110,6 +110,8 @@ mummerplot -t png -p mummerplot_assembly_only_chromosomal matches_assembly.mumme
 
 ## Nucmer
 
+https://github.com/widdowquinn/Teaching/blob/master/Comparative_Genomics_and_Visualisation/Part_1/whole_genome_alignment/whole_genome_alignments_A_UoD.md#5-run-nucmer
+
 ```
 nucmer /home/sarasl/git/GenomeAnalysis/Data/scaffold/sel4_NW_015503979.fna /home/sarasl/git/GenomeAnalysis/2_genome_assembly/SOAPdenovo_output_K49.contig
 
