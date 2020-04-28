@@ -28,14 +28,12 @@ module load MUMmer
 # Input sources
 input_Canu_PacBio=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio/canu_pacbio.contigs.fasta
 
+# I could not make 'nucmer' work before I have unzipped the reference file
 reference_file=/home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna
 
-output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_mummer_onCanu_PacBio
-#mkdir -p ${output_folder}		# creates the output folders if they don't exist yet
 ####################################
 
 # Code to run
-nucmer ${reference_file} ${input_Canu_PacBio} > Canu_PacBio_noPolish.mummer
+nucmer ${reference_file} ${input_Canu_PacBio}
 
-#mummerplot -t png -p mummerplot_assembly Canu_PacBio_noPolish.mummer
 mummerplot --png out.delta
