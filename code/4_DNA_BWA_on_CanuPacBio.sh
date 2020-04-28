@@ -23,11 +23,12 @@ module load samtools
 
 # Input sources
 input_Canu_Pacbio=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio/canu_pacbio.contigs.fasta
-source_Ill_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/Illumina
+source_Ill_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/Illumina/
 in_file1=E745-1.L500_SZAXPI015146-56_1_clean.fq.gz
 in_file2=E745-1.L500_SZAXPI015146-56_2_clean.fq.gz
 
 output_folder_name=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/4_DNA_bwa_onCanu_PacBio
+mkdir -p ${output_folder_name}		# creates the output folders if they don't exist yet
 ####################################
 
 # Code to run
@@ -38,8 +39,8 @@ bwa index -p ${output_folder_name}/pacbio_index ${input_Canu_Pacbio}
 # the algorithm works by seeding alignments with maximal exact matches (MEMs) and then extending seeds with the affine-gap Smith-Waterman algorithm (SW). 
 # -M to flag shorter split hits as secondary to longer hits 
 # bwa mem pacbio_index ${source_files}${in_file1} ${source_files}${in_file2} > ${output_folder_name}/align_ill_to_pacbio.sam 
-bwa mem ${output_folder_name}/pacbio_index ${source_files}/${in_file1} ${source_files}/${in_file2}|
-samtools sort -o ${output_folder_name}/align_ill_to_pacbio_sorted.bam
+bwa mem -M ${output_folder_name}/pacbio_index ${source_Ill_files}${in_file1} ${source_Ill_files}${in_file2} > ${output_folder_name}/align_ill_to_pacbio.sam
+#samtools sort -o ${output_folder_name}/align_ill_to_pacbio_sorted.bam
 
 # convert 'sam' to 'bam' (-b) and sort the 'bam' file
 #samtools view -u ${output_folder_name}/align_ill_to_pacbio.sam -o ${output_folder_name}/align_ill_to_pacbio.bam
