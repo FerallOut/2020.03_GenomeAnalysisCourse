@@ -6,13 +6,19 @@
 
 Comparison of assemblies of E. faecium (for contigs >+??? 500 bp)  
 
-Mummerplot canu assembly
+Mummerplot canu assembly before polish
 
 <img src="/home/ferall/Dropbox/0MSc_Bioinfo_Uppsala/Sem1_1MB462_Genome_Analysis/2020.03_GenomeAnalysisCourse/notebooks/images/3_mummer_Canu_Pac.png" alt="3_mummer_Canu_Pac" style="zoom:50%;" />
 
+Mummerplot canu assembly after polish
+
+<img src="/home/ferall/Desktop/GA/notebooks/images/6_mummer_Canu_Pac.png" alt="6_mummer_Canu_Pac" style="zoom:50%;" />
+
 Mummerplot spades assembly
 
-<img src="/home/ferall/Dropbox/0MSc_Bioinfo_Uppsala/Sem1_1MB462_Genome_Analysis/2020.03_GenomeAnalysisCourse/code/out.png" alt="out" style="zoom:50%;" />
+<img src="/home/ferall/Desktop/GA/notebooks/images/3a_mummer_Spades_Nano_Ill.png" alt="3a_mummer_Spades_Nano_Ill" style="zoom:50%;" />
 
-## BWA-pilon
+
+
+##
 
