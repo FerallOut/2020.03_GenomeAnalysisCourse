@@ -22,11 +22,11 @@ module load Pilon
 
 # Input sources
 input_Canu_Pacbio=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio/canu_pacbio.contigs.fasta
-input_Ill_alignment=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/4_DNA_bwa_onCanu_PacBio
+input_Ill_alignment=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/4_DNA_bwa_onCanu_PacBio/align_ill_to_pacbio_sorted.bam
 
 output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/5_DNA_Pilon_onCanu_PacBio
 mkdir -p ${output_folder}		# creates the output folders if they don't exist yet
 ####################################
 
 # Code to run
-pilon --genome ${input_Canu_Pacbio} --frags ${input_Ill_alignment} --outdir ${output_folder} --output pilon_
+pilon --genome ${input_Canu_Pacbio} --frags ${input_Ill_alignment} --outdir ${output_folder} --output pilon_output_canu_Nano
