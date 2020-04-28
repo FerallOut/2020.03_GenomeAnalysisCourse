@@ -4,12 +4,12 @@
 # (maximum query length is 18446744073709551615)
 # process 4183 characters per dot
 #....................................................................................................
-# CONSTRUCTIONTIME mummer /home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz 0.96
-# reading input file "/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/contigs.fasta" of length 3140656
-# matching query-file "/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/contigs.fasta"
+# CONSTRUCTIONTIME mummer /home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz 0.93
+# reading input file "/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio/canu_pacbio.contigs.fasta" of length 3166167
+# matching query-file "/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio/canu_pacbio.contigs.fasta"
 # against subject-file "/home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz"
-# COMPLETETIME mummer /home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz 5.52
-# SPACE mummer /home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz 3.90
+# COMPLETETIME mummer /home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz 5.81
+# SPACE mummer /home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz 3.91
 defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/rackham/mummerplot line 884.
 	(Maybe you should just omit the defined()?)
 defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/rackham/mummerplot line 894.
@@ -23,9 +23,6 @@ defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/rackham/mummerplot line 
 defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/rackham/mummerplot line 1044.
 	(Maybe you should just omit the defined()?)
 gnuplot 4.6 patchlevel 2
-Reading mummer file Spades_PacBio_noPolish.mummer (use mummer -c)
-Writing plot files ref_qry.fplot, ref_qry.rplot
+Reading mummer file Canu_PacBio_noPolish.mummer (use mummer -c)
+Writing plot files mummerplot_assembly.fplot, mummerplot_assembly.rplot
 ERROR: No alignment data to plot
-Cannot open load file 'ref_qry.gp'
-"ref_qry.gp", line 0: util.c: No such file or directory
-

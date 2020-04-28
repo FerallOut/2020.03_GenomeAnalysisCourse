@@ -4,7 +4,7 @@
 #SBATCH -p core			# core/ node
 #SBATCH -n 1			# nr of cores/ nodes
 #SBATCH -t 00:30:00		# time needed (dd-hh:mm:ss)
-#SBATCH -J Mummer_Spades_Nano+Ill_ref	# a name for your job
+#SBATCH -J Mummer_Canu_PacBio_ref	# a name for your job
 ####################################
 
 # Load modules
@@ -27,12 +27,12 @@ module load MUMmer/3.23
 ####################################
 
 # Input sources
-input_Spades_Nano_Illumina=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/contigs.fasta
+input_Canu_PacBio=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio/canu_pacbio.contigs.fasta
 
 reference_file=/home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz
 ####################################
 
 # Code to run
-mummer -mum -b -c -L ${reference_file} ${input_Spades_Nano_Illumina} > Spades_Nano_Ill_noPolish.mummer
+mummer -mum -b -c -L ${reference_file} ${input_Canu_PacBio} > Canu_PacBio_noPolish.mummer
 
-mummerplot -t png -p mummerplot_assembly Spades_Nano_Ill_noPolish.mummer
+mummerplot -t png -p mummerplot_assembly Canu_PacBio_noPolish.mummer
