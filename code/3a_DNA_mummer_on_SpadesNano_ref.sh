@@ -11,7 +11,6 @@
 module purge
 module load bioinfo-tools
 #module load MUMmer
-module load MUMmer/3.23 
 ####################################
 
 # evaluate assemblies with 'MUMmerplot'
@@ -29,10 +28,11 @@ module load MUMmer/3.23
 # Input sources
 input_Spades_Nano_Illumina=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/contigs.fasta
 
-reference_file=/home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz
+# I could not make 'nucmer' work before I have unzipped the reference file 
+reference_file=/home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna
 ####################################
 
 # Code to run
-mummer -mum -b -c -L ${reference_file} ${input_Spades_Nano_Illumina} > Spades_Nano_Ill_noPolish.mummer
+nucmer ${reference_file} ${input_Spades_Nano_Illumina}
 
-mummerplot -t png -p mummerplot_assembly Spades_Nano_Ill_noPolish.mummer
+mummerplot --png out.delta
