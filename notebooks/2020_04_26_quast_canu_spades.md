@@ -116,3 +116,10 @@ nucmer /home/sarasl/git/GenomeAnalysis/Data/scaffold/sel4_NW_015503979.fna /home
 mummerplot --png /home/sarasl/git/GenomeAnalysis/2_genome_assembly/MUMmer/out.delta
 #not sure what you mean by delta-filtering step
 ```
+
+doesn't work with zipped files:
+
+```
+cp /proj/g2020008/2_Eckalbar_2016/additional_data/sel4_NW_015503979.fna.gz ~/ 
+```
+
