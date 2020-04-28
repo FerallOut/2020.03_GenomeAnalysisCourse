@@ -25,8 +25,7 @@ input_Canu_Pacbio=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu
 input_Ill_alignment=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/4_DNA_bwa_onCanu_PacBio
 
 output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/5_DNA_Pilon_onCanu_PacBio
-output_file_name=Pilon_output_Canu
-mkdir -p ${output_folder_name}		# creates the output folders if they don't exist yet
+mkdir -p ${output_folder}		# creates the output folders if they don't exist yet
 ####################################
 
 # Code to run
