@@ -38,20 +38,12 @@ bwa index -p ${output_folder_name}/pacbio_index ${input_Canu_Pacbio}
 # Alignment algorithms are invoked with sub-command 'mem' for the BWA-MEM algorithm
 # the algorithm works by seeding alignments with maximal exact matches (MEMs) and then extending seeds with the affine-gap Smith-Waterman algorithm (SW). 
 # -M to flag shorter split hits as secondary to longer hits 
+# 'sort' outputs directly to 'bam' (no need for separate 'sam' to 'bam' conversion), and sorts
 bwa mem -M ${output_folder_name}/pacbio_index ${source_Ill_files}${in_file1} ${source_Ill_files}${in_file2}| \
 samtools sort -o ${output_folder_name}/align_ill_to_pacbio_sorted.bam
  
-
-#this worked
-#bwa mem -M ${output_folder_name}/pacbio_index ${source_Ill_files}${in_file1} ${source_Ill_files}${in_file2} > ${output_folder_name}/align_ill_to_pacbio.sam
-
-
-# convert 'sam' to 'bam' (-b) and sort the 'bam' file
-#samtools view -u ${output_folder_name}/align_ill_to_pacbio.sam -o ${output_folder_name}/align_ill_to_pacbio.bam
-# sort the 'bam' file
-#samtools sort ${output_folder_name}/align_ill_to_pacbio.sam -o ${output_folder_name}/align_ill_to_pacbio_sorted.bam
 # index the sorted bam file
-#samtools index ${output_folder_name}/align_ill_to_pacbio_sorted.bam
+samtools index ${output_folder_name}/align_ill_to_pacbio_sorted.bam
 
 
 
