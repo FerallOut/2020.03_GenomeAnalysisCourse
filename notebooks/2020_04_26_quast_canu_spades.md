@@ -107,3 +107,12 @@ mummerplot -t png -p mummerplot_assembly_only_chromosomal matches_assembly.mumme
   | `-t string                     --terminal` | `Set the output terminal to x11, postscript or png              --x11 --postscript --png` |
   | `-x range                      --xrange `  | `Set the x-range for the plot in the form "[min,max]"`       |
   | `-y range                      --yrange `  | `Set the y-range for the plot in the form "[min,max]"`       |
+
+## Nucmer
+
+```
+nucmer /home/sarasl/git/GenomeAnalysis/Data/scaffold/sel4_NW_015503979.fna /home/sarasl/git/GenomeAnalysis/2_genome_assembly/SOAPdenovo_output_K49.contig
+
+mummerplot --png /home/sarasl/git/GenomeAnalysis/2_genome_assembly/MUMmer/out.delta
+#not sure what you mean by delta-filtering step
+```
