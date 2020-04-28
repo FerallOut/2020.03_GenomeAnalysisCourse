@@ -10,8 +10,7 @@
 # Load modules
 module purge
 module load bioinfo-tools
-#module load MUMmer
-module load MUMmer/3.23 
+module load MUMmer
 ####################################
 
 # evaluate assemblies with 'MUMmerplot'
@@ -30,9 +29,12 @@ module load MUMmer/3.23
 input_Canu_PacBio=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio/canu_pacbio.contigs.fasta
 
 reference_file=/home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna.gz
+
+output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/3_DNA_mummer_onCanu_PacBio
+mkdir -p ${output_folder}		# creates the output folders if they don't exist yet
 ####################################
 
 # Code to run
-mummer -mum -b -c -L ${reference_file} ${input_Canu_PacBio} > Canu_PacBio_noPolish.mummer
+nucmer ${reference_file} ${input_Canu_PacBio} > ${output_folder}/Canu_PacBio_noPolish.mummer
 
-mummerplot -t png -p mummerplot_assembly Canu_PacBio_noPolish.mummer
+mummerplot -t png -p mummerplot_assembly ${output_folder}/Canu_PacBio_noPolish.mummer
