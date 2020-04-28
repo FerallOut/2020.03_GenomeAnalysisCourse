@@ -15,7 +15,7 @@ module load samtools
 ####################################
 
 # map Illumina reads to PacBio assembly with 'bwa'
-# prep file for Pilon using 'samtools' (needs to be indexed again, and for that needs to be sorted before)
+# prep file for Pilon using 'samtools' (needs to be indexed again, bam format, and for that needs to be sorted before)
 
 # bwa index [-p prefix] [-a algoType] <in.db.fasta> 
 # bwa mem [-aCHMpP] [-t nThreads] [-k minSeedLen] [-w bandWidth] [-d zDropoff] [-r seedSplitRatio] [-c maxOcc] [-A matchScore] [-B mmPenalty] [-O gapOpenPen] [-E gapExtPen] [-L clipPen] [-U unpairPen] [-R RGline] [-v verboseLevel] db.prefix reads.fq [mates.fq] 
@@ -37,8 +37,16 @@ bwa index -p pacbio_index ${input_Canu_Pacbio}
 # Alignment algorithms are invoked with sub-command 'mem' for the BWA-MEM algorithm
 # the algorithm works by seeding alignments with maximal exact matches (MEMs) and then extending seeds with the affine-gap Smith-Waterman algorithm (SW). 
 # -M to flag shorter split hits as secondary to longer hits 
-bwa mem pacbio_index ${source_files}${in_file1} ${source_files}${in_file2} > align_ill_to_pacbio.sam
+# bwa mem pacbio_index ${source_files}${in_file1} ${source_files}${in_file2} > ${output_folder_name}/align_ill_to_pacbio.sam 
+bwa mem pacbio_index ${source_files}${in_file1} ${source_files}${in_file2}|
+samtools sort -o ${output_folder_name}/align_ill_to_pacbio_sorted.bam
 
-samtools sort -T tmp -o aln-pb.sorted.bam aln-pb.bam
-samtools view -bt ref.fa.fai aln-pe.sam > aln-pb.bam
-samtools index aln-pb.sorted.bam
+# convert 'sam' to 'bam' (-b) and sort the 'bam' file
+#samtools view -u ${output_folder_name}/align_ill_to_pacbio.sam -o ${output_folder_name}/align_ill_to_pacbio.bam
+# sort the 'bam' file
+#samtools sort ${output_folder_name}/align_ill_to_pacbio.sam -o ${output_folder_name}/align_ill_to_pacbio_sorted.bam
+# index the sorted bam file
+#samtools index ${output_folder_name}/align_ill_to_pacbio_sorted.bam
+
+
+
