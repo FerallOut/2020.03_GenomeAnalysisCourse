@@ -33,10 +33,6 @@ reference_file=/home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_
 ####################################
 
 # Code to run
-mummer -mum -b -c -L ${reference_file} ${input_Spades_Nano_Illumina} > Spades_PacBio_noPolish.mummer
+mummer -mum -b -c ${reference_file} ${input_Spades_Nano_Illumina} > Spades_PacBio_noPolish.mummer
 
-mummerplot --postscript --prefix=ref_qry Spades_PacBio_noPolish.mummer
-
-gnuplot ref_qry.gp
-
-#-t png -p mummerplot_assembly Spades_PacBio_noPolish.mummer
+mummerplot -t png -p mummerplot_assembly Spades_PacBio_noPolish.mummer
