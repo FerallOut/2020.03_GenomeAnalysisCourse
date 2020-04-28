@@ -1,0 +1,5 @@
+gnuplot 4.6 patchlevel 2
+Reading delta file out.delta
+Writing plot files out.fplot, out.rplot
+Writing gnuplot script out.gp
+Rendering plot out.png
