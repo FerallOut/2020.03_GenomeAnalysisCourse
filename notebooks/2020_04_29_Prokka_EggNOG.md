@@ -8,3 +8,9 @@ https://github.com/tseemann/prokka#invoking-prokka
 % art mydir/mygenome.gff
 ```
 
+## EGG-nog
+
+http://eggnog-mapper.embl.de/ 
+
+http://eggnog5.embl.de/#/app/home
+
