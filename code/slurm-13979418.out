@@ -1,0 +1,3 @@
+Error opening delta file 'compare_spades_canu.delta'
+gnuplot 4.6 patchlevel 2
+ERROR: Could not read compare_spades_canu_filtered.delta, File is empty
