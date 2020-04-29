@@ -125,3 +125,11 @@ doesn't work with zipped files:
 cp /proj/g2020008/2_Eckalbar_2016/additional_data/sel4_NW_015503979.fna.gz ~/ 
 ```
 
+## compare 2 genomes
+
+https://sourceforge.net/p/mummer/mailman/message/36137601/
+
+```
+nucmer --maxmatch -l 100 -c 100 -p compare1_2 assembly1.fasta assembly2.fasta
+mummerplot --png -p compare1_2 compare1_2.delta -R assembly1.fasta -Q assembly2.fasta
+```
