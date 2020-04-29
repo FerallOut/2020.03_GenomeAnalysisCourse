@@ -351,3 +351,344 @@ Note the old-format NCBI blast databases are no longer being updated after Septe
 [10:09:41] There are still 1388 unannotated CDS left (started with 3086)
 [10:09:41] Will use hmmer3 to search against /sw/bioinfo/prokka/1.12-12547ca/rackham/bin/../db/hmm/HAMAP.hmm with 8 CPUs
 [10:09:41] Running: cat \/home\/miba8458\/2020\.03_GenomeAnalysisCourse\/scratch\/7_DNA_prokka_onCanu\/HAMAP\.hmm\.faa | parallel --gnu --plain -j 8 --block 20026 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-06 --cpu 1 /sw/bioinfo/prokka/1.12-12547ca/rackham/bin/../db/hmm/HAMAP.hmm /dev/stdin > \/home\/miba8458\/2020\.03_GenomeAnalysisCourse\/scratch\/7_DNA_prokka_onCanu\/HAMAP\.hmm\.hmmer3 2> /dev/null
+[10:11:22] Modify product: Protein SprT-like => Protein SprT-like protein
+[10:11:23] Cleaned 1 /product names
+[10:11:23] Deleting unwanted file: /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/HAMAP.hmm.faa
+[10:11:23] Deleting unwanted file: /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/HAMAP.hmm.hmmer3
+[10:11:23] Labelling remaining 1327 proteins as 'hypothetical protein'
+[10:11:23] Possible /pseudo 'Coenzyme A biosynthesis bifunctional protein CoaBC' at tig00000001_pilon position 4724
+[10:11:23] Possible /pseudo 'Regulatory protein Spx' at tig00000001_pilon position 225226
+[10:11:23] Possible /pseudo 'Na(+)/H(+) antiporter NhaC' at tig00000001_pilon position 287128
+[10:11:23] Possible /pseudo 'Calcium-transporting ATPase 1' at tig00000001_pilon position 422149
+[10:11:23] Possible /pseudo 'putative protease YdcP' at tig00000001_pilon position 655138
+[10:11:23] Possible /pseudo 'Putative NAD(P)H nitroreductase YodC' at tig00000001_pilon position 791329
+[10:11:23] Possible /pseudo 'Multidrug efflux protein YfmO' at tig00000001_pilon position 794993
+[10:11:23] Possible /pseudo 'putative ABC transporter ATP-binding protein' at tig00000001_pilon position 890656
+[10:11:23] Possible /pseudo 'putative ABC transporter ATP-binding protein' at tig00000001_pilon position 904118
+[10:11:23] Possible /pseudo 'putative glycosyltransferase EpsJ' at tig00000001_pilon position 1168085
+[10:11:23] Possible /pseudo 'Sensor histidine kinase DcuS' at tig00000001_pilon position 1439713
+[10:11:23] Possible /pseudo 'Di-/tripeptide transporter' at tig00000001_pilon position 1529602
+[10:11:23] Possible /pseudo 'Dihydroorotate dehydrogenase B (NAD(+)), electron transfer subunit' at tig00000001_pilon position 1620327
+[10:11:23] Possible /pseudo 'General stress protein A' at tig00000001_pilon position 1746538
+[10:11:23] Possible /pseudo 'Xylulose-5-phosphate phosphoketolase' at tig00000001_pilon position 1921475
+[10:11:23] Possible /pseudo 'Xylulose-5-phosphate phosphoketolase' at tig00000001_pilon position 1922491
+[10:11:23] Possible /pseudo 'Phosphonoacetaldehyde hydrolase' at tig00000001_pilon position 1943899
+[10:11:23] Possible /pseudo 'N-alpha-acetyltransferase RimI' at tig00000001_pilon position 1953665
+[10:11:23] Possible /pseudo 'putative glycosyltransferase EpsJ' at tig00000001_pilon position 2207520
+[10:11:23] Possible /pseudo 'Phosphate import ATP-binding protein PstB 3' at tig00000001_pilon position 2272713
+[10:11:23] Possible /pseudo 'putative ABC transporter ATP-binding protein' at tig00000001_pilon position 2420817
+[10:11:23] Possible /pseudo 'putative ABC transporter ATP-binding protein' at tig00000001_pilon position 2498291
+[10:11:23] Possible /pseudo 'PTS system mannitol-specific EIICB component' at tig00000001_pilon position 2561796
+[10:11:23] Possible /pseudo 'PTS system mannose-specific EIIAB component' at tig00000001_pilon position 2690231
+[10:11:23] Possible /pseudo 'PTS system fructose-specific EIIABC component' at tig00000001_pilon position 2735328
+[10:11:23] Possible /pseudo 'Coenzyme A biosynthesis bifunctional protein CoaBC' at tig00000001_pilon position 2769734
+[10:11:23] Found 1246 unique /gene codes.
+[10:11:23] Fixed 2 duplicate /gene - patA_1 patA_2
+[10:11:23] Fixed 5 duplicate /gene - gmuE_1 gmuE_2 gmuE_3 gmuE_4 gmuE_5
+[10:11:23] Fixed 2 duplicate /gene - yknY_1 yknY_2
+[10:11:23] Fixed 2 duplicate /gene - rny_1 rny_2
+[10:11:23] Fixed 2 duplicate /gene - hrtA_1 hrtA_2
+[10:11:23] Fixed 6 duplicate /gene - lacF_1 lacF_2 lacF_3 lacF_4 lacF_5 lacF_6
+[10:11:23] Fixed 2 duplicate /gene - scrB_1 scrB_2
+[10:11:23] Fixed 2 duplicate /gene - dcuS_1 dcuS_2
+[10:11:23] Fixed 3 duplicate /gene - yecD_1 yecD_2 yecD_3
+[10:11:23] Fixed 3 duplicate /gene - nhaC_1 nhaC_2 nhaC_3
+[10:11:23] Fixed 2 duplicate /gene - guaA_1 guaA_2
+[10:11:23] Fixed 2 duplicate /gene - corC_1 corC_2
+[10:11:23] Fixed 2 duplicate /gene - lacE_1 lacE_2
+[10:11:23] Fixed 3 duplicate /gene - treP_1 treP_2 treP_3
+[10:11:23] Fixed 2 duplicate /gene - proX_1 proX_2
+[10:11:23] Fixed 2 duplicate /gene - prmC_1 prmC_2
+[10:11:23] Fixed 2 duplicate /gene - ywpJ_1 ywpJ_2
+[10:11:23] Fixed 3 duplicate /gene - argR_1 argR_2 argR_3
+[10:11:23] Fixed 2 duplicate /gene - glcR_1 glcR_2
+[10:11:23] Fixed 2 duplicate /gene - araR_1 araR_2
+[10:11:23] Fixed 2 duplicate /gene - rpmGA_1 rpmGA_2
+[10:11:23] Fixed 4 duplicate /gene - licT_1 licT_2 licT_3 licT_4
+[10:11:23] Fixed 3 duplicate /gene - yxdL_1 yxdL_2 yxdL_3
+[10:11:23] Fixed 2 duplicate /gene - rluB_1 rluB_2
+[10:11:23] Fixed 2 duplicate /gene - opuCA_1 opuCA_2
+[10:11:23] Fixed 2 duplicate /gene - cdr_1 cdr_2
+[10:11:23] Fixed 2 duplicate /gene - mtlR_1 mtlR_2
+[10:11:23] Fixed 2 duplicate /gene - abfA_1 abfA_2
+[10:11:23] Fixed 3 duplicate /gene - yidA_1 yidA_2 yidA_3
+[10:11:23] Fixed 5 duplicate /gene - soj_1 soj_2 soj_3 soj_4 soj_5
+[10:11:23] Fixed 2 duplicate /gene - clpP_1 clpP_2
+[10:11:23] Fixed 2 duplicate /gene - mutS2_1 mutS2_2
+[10:11:23] Fixed 2 duplicate /gene - galM_1 galM_2
+[10:11:23] Fixed 2 duplicate /gene - der_1 der_2
+[10:11:23] Fixed 2 duplicate /gene - ddl_1 ddl_2
+[10:11:23] Fixed 2 duplicate /gene - bceB_1 bceB_2
+[10:11:23] Fixed 3 duplicate /gene - frlB_1 frlB_2 frlB_3
+[10:11:23] Fixed 2 duplicate /gene - srrA_1 srrA_2
+[10:11:23] Fixed 2 duplicate /gene - purR_1 purR_2
+[10:11:23] Fixed 2 duplicate /gene - acuI_1 acuI_2
+[10:11:23] Fixed 2 duplicate /gene - atpE_1 atpE_2
+[10:11:23] Fixed 3 duplicate /gene - yvoA_1 yvoA_2 yvoA_3
+[10:11:23] Fixed 2 duplicate /gene - iap_1 iap_2
+[10:11:23] Fixed 2 duplicate /gene - lsrC_1 lsrC_2
+[10:11:23] Fixed 3 duplicate /gene - artM_1 artM_2 artM_3
+[10:11:23] Fixed 2 duplicate /gene - fabZ_1 fabZ_2
+[10:11:23] Fixed 4 duplicate /gene - degA_1 degA_2 degA_3 degA_4
+[10:11:23] Fixed 2 duplicate /gene - mutS_1 mutS_2
+[10:11:23] Fixed 2 duplicate /gene - pgl_1 pgl_2
+[10:11:23] Fixed 2 duplicate /gene - gmuC_1 gmuC_2
+[10:11:23] Fixed 3 duplicate /gene - folA_1 folA_2 folA_3
+[10:11:23] Fixed 2 duplicate /gene - murA1_1 murA1_2
+[10:11:23] Fixed 2 duplicate /gene - ponA_1 ponA_2
+[10:11:23] Fixed 2 duplicate /gene - helD_1 helD_2
+[10:11:23] Fixed 2 duplicate /gene - yodC_1 yodC_2
+[10:11:23] Fixed 2 duplicate /gene - glnQ_1 glnQ_2
+[10:11:23] Fixed 2 duplicate /gene - menH_1 menH_2
+[10:11:23] Fixed 2 duplicate /gene - yecS_1 yecS_2
+[10:11:23] Fixed 6 duplicate /gene - manX_1 manX_2 manX_3 manX_4 manX_5 manX_6
+[10:11:23] Fixed 3 duplicate /gene - cbh_1 cbh_2 cbh_3
+[10:11:23] Fixed 2 duplicate /gene - dtd3_1 dtd3_2
+[10:11:23] Fixed 4 duplicate /gene - phoR_1 phoR_2 phoR_3 phoR_4
+[10:11:23] Fixed 2 duplicate /gene - rpmF_1 rpmF_2
+[10:11:23] Fixed 4 duplicate /gene - natA_1 natA_2 natA_3 natA_4
+[10:11:23] Fixed 2 duplicate /gene - npr_1 npr_2
+[10:11:23] Fixed 5 duplicate /gene - bglF_1 bglF_2 bglF_3 bglF_4 bglF_5
+[10:11:23] Fixed 3 duplicate /gene - gatC_1 gatC_2 gatC_3
+[10:11:23] Fixed 2 duplicate /gene - cfiB_1 cfiB_2
+[10:11:23] Fixed 2 duplicate /gene - yugI_1 yugI_2
+[10:11:23] Fixed 2 duplicate /gene - acpA_1 acpA_2
+[10:11:23] Fixed 2 duplicate /gene - pepF1_1 pepF1_2
+[10:11:23] Fixed 2 duplicate /gene - licR_1 licR_2
+[10:11:23] Fixed 4 duplicate /gene - xerC_1 xerC_2 xerC_3 xerC_4
+[10:11:23] Fixed 2 duplicate /gene - aes_1 aes_2
+[10:11:23] Fixed 2 duplicate /gene - mshD_1 mshD_2
+[10:11:23] Fixed 3 duplicate /gene - agaSK_1 agaSK_2 agaSK_3
+[10:11:23] Fixed 2 duplicate /gene - xerS_1 xerS_2
+[10:11:23] Fixed 2 duplicate /gene - dnaX_1 dnaX_2
+[10:11:23] Fixed 2 duplicate /gene - gpmA_1 gpmA_2
+[10:11:23] Fixed 2 duplicate /gene - dus_1 dus_2
+[10:11:23] Fixed 5 duplicate /gene - xerD_1 xerD_2 xerD_3 xerD_4 xerD_5
+[10:11:23] Fixed 2 duplicate /gene - dinG_1 dinG_2
+[10:11:23] Fixed 7 duplicate /gene - araQ_1 araQ_2 araQ_3 araQ_4 araQ_5 araQ_6 araQ_7
+[10:11:23] Fixed 2 duplicate /gene - vanX_1 vanX_2
+[10:11:23] Fixed 2 duplicate /gene - afr_1 afr_2
+[10:11:23] Fixed 2 duplicate /gene - mepM_1 mepM_2
+[10:11:23] Fixed 2 duplicate /gene - nanE_1 nanE_2
+[10:11:23] Fixed 4 duplicate /gene - tqsA_1 tqsA_2 tqsA_3 tqsA_4
+[10:11:23] Fixed 2 duplicate /gene - ypdA_1 ypdA_2
+[10:11:23] Fixed 2 duplicate /gene - ssaB_1 ssaB_2
+[10:11:23] Fixed 2 duplicate /gene - xylB_1 xylB_2
+[10:11:23] Fixed 2 duplicate /gene - corA_1 corA_2
+[10:11:23] Fixed 2 duplicate /gene - metP_1 metP_2
+[10:11:23] Fixed 2 duplicate /gene - dagK_1 dagK_2
+[10:11:23] Fixed 2 duplicate /gene - ygaZ_1 ygaZ_2
+[10:11:23] Fixed 3 duplicate /gene - bglH_1 bglH_2 bglH_3
+[10:11:23] Fixed 2 duplicate /gene - ccpA_1 ccpA_2
+[10:11:23] Fixed 2 duplicate /gene - sufB_1 sufB_2
+[10:11:23] Fixed 5 duplicate /gene - topB_1 topB_2 topB_3 topB_4 topB_5
+[10:11:23] Fixed 3 duplicate /gene - rluD_1 rluD_2 rluD_3
+[10:11:23] Fixed 2 duplicate /gene - mro_1 mro_2
+[10:11:23] Fixed 2 duplicate /gene - ctpE_1 ctpE_2
+[10:11:23] Fixed 2 duplicate /gene - arlR_1 arlR_2
+[10:11:23] Fixed 2 duplicate /gene - yvdM_1 yvdM_2
+[10:11:23] Fixed 2 duplicate /gene - glcU_1 glcU_2
+[10:11:23] Fixed 2 duplicate /gene - clsA_1 clsA_2
+[10:11:23] Fixed 2 duplicate /gene - bceA_1 bceA_2
+[10:11:23] Fixed 2 duplicate /gene - yehU_1 yehU_2
+[10:11:23] Fixed 3 duplicate /gene - ftsL_1 ftsL_2 ftsL_3
+[10:11:23] Fixed 2 duplicate /gene - levD_1 levD_2
+[10:11:23] Fixed 2 duplicate /gene - recQ_1 recQ_2
+[10:11:23] Fixed 3 duplicate /gene - glpE_1 glpE_2 glpE_3
+[10:11:23] Fixed 2 duplicate /gene - yoeB_1 yoeB_2
+[10:11:23] Fixed 2 duplicate /gene - uvrC_1 uvrC_2
+[10:11:23] Fixed 2 duplicate /gene - pstB3_1 pstB3_2
+[10:11:23] Fixed 2 duplicate /gene - fldH_1 fldH_2
+[10:11:23] Fixed 3 duplicate /gene - ssb_1 ssb_2 ssb_3
+[10:11:23] Fixed 2 duplicate /gene - ribZ_1 ribZ_2
+[10:11:23] Fixed 2 duplicate /gene - ubiE_1 ubiE_2
+[10:11:23] Fixed 2 duplicate /gene - cmtB_1 cmtB_2
+[10:11:23] Fixed 2 duplicate /gene - metQ_1 metQ_2
+[10:11:23] Fixed 2 duplicate /gene - cspLA_1 cspLA_2
+[10:11:23] Fixed 4 duplicate /gene - araC_1 araC_2 araC_3 araC_4
+[10:11:23] Fixed 2 duplicate /gene - agrA_1 agrA_2
+[10:11:23] Fixed 2 duplicate /gene - brnQ_1 brnQ_2
+[10:11:23] Fixed 2 duplicate /gene - nox_1 nox_2
+[10:11:23] Fixed 2 duplicate /gene - vanA_1 vanA_2
+[10:11:23] Fixed 2 duplicate /gene - sorC_1 sorC_2
+[10:11:23] Fixed 2 duplicate /gene - glpQ_1 glpQ_2
+[10:11:23] Fixed 2 duplicate /gene - ydcP_1 ydcP_2
+[10:11:23] Fixed 2 duplicate /gene - wbgU_1 wbgU_2
+[10:11:23] Fixed 2 duplicate /gene - vanH_1 vanH_2
+[10:11:23] Fixed 3 duplicate /gene - lacG_1 lacG_2 lacG_3
+[10:11:23] Fixed 2 duplicate /gene - lacC_1 lacC_2
+[10:11:23] Fixed 5 duplicate /gene - dinB_1 dinB_2 dinB_3 dinB_4 dinB_5
+[10:11:23] Fixed 2 duplicate /gene - ettA_1 ettA_2
+[10:11:23] Fixed 2 duplicate /gene - gspA_1 gspA_2
+[10:11:23] Fixed 2 duplicate /gene - msrR_1 msrR_2
+[10:11:23] Fixed 2 duplicate /gene - araN_1 araN_2
+[10:11:23] Fixed 3 duplicate /gene - gatA_1 gatA_2 gatA_3
+[10:11:23] Fixed 2 duplicate /gene - feuB_1 feuB_2
+[10:11:23] Fixed 2 duplicate /gene - gmuD_1 gmuD_2
+[10:11:23] Fixed 2 duplicate /gene - phnX_1 phnX_2
+[10:11:23] Fixed 2 duplicate /gene - yhfK_1 yhfK_2
+[10:11:23] Fixed 2 duplicate /gene - pglH_1 pglH_2
+[10:11:23] Fixed 3 duplicate /gene - exuR_1 exuR_2 exuR_3
+[10:11:23] Fixed 3 duplicate /gene - walR_1 walR_2 walR_3
+[10:11:23] Fixed 7 duplicate /gene - ltrA_1 ltrA_2 ltrA_3 ltrA_4 ltrA_5 ltrA_6 ltrA_7
+[10:11:23] Fixed 3 duplicate /gene - mtlA_1 mtlA_2 mtlA_3
+[10:11:23] Fixed 2 duplicate /gene - ftsW_1 ftsW_2
+[10:11:23] Fixed 3 duplicate /gene - znuA_1 znuA_2 znuA_3
+[10:11:23] Fixed 2 duplicate /gene - glnP_1 glnP_2
+[10:11:23] Fixed 2 duplicate /gene - rbn_1 rbn_2
+[10:11:23] Fixed 2 duplicate /gene - lytR_1 lytR_2
+[10:11:23] Fixed 2 duplicate /gene - pstS1_1 pstS1_2
+[10:11:23] Fixed 2 duplicate /gene - gpsA_1 gpsA_2
+[10:11:23] Fixed 3 duplicate /gene - gph_1 gph_2 gph_3
+[10:11:23] Fixed 4 duplicate /gene - epsJ_1 epsJ_2 epsJ_3 epsJ_4
+[10:11:23] Fixed 2 duplicate /gene - por_1 por_2
+[10:11:23] Fixed 2 duplicate /gene - ugl_1 ugl_2
+[10:11:23] Fixed 2 duplicate /gene - ulaA_1 ulaA_2
+[10:11:23] Fixed 2 duplicate /gene - oppF_1 oppF_2
+[10:11:23] Fixed 2 duplicate /gene - Int-Tn_1 Int-Tn_2
+[10:11:23] Fixed 2 duplicate /gene - ntpJ_1 ntpJ_2
+[10:11:23] Fixed 2 duplicate /gene - mprF_1 mprF_2
+[10:11:23] Fixed 3 duplicate /gene - fabG_1 fabG_2 fabG_3
+[10:11:23] Fixed 2 duplicate /gene - glnM_1 glnM_2
+[10:11:23] Fixed 2 duplicate /gene - rsmA_1 rsmA_2
+[10:11:23] Fixed 3 duplicate /gene - pspB_1 pspB_2 pspB_3
+[10:11:23] Fixed 2 duplicate /gene - gtaB_1 gtaB_2
+[10:11:23] Fixed 2 duplicate /gene - queT_1 queT_2
+[10:11:23] Fixed 2 duplicate /gene - murF_1 murF_2
+[10:11:23] Fixed 3 duplicate /gene - potA_1 potA_2 potA_3
+[10:11:23] Fixed 3 duplicate /gene - manR_1 manR_2 manR_3
+[10:11:23] Fixed 3 duplicate /gene - panT_1 panT_2 panT_3
+[10:11:23] Fixed 2 duplicate /gene - immR_1 immR_2
+[10:11:23] Fixed 2 duplicate /gene - potB_1 potB_2
+[10:11:23] Fixed 2 duplicate /gene - licA_1 licA_2
+[10:11:23] Fixed 4 duplicate /gene - coaBC_1 coaBC_2 coaBC_3 coaBC_4
+[10:11:23] Fixed 6 duplicate /gene - smc_1 smc_2 smc_3 smc_4 smc_5 smc_6
+[10:11:23] Fixed 7 duplicate /gene - bin3_1 bin3_2 bin3_3 bin3_4 bin3_5 bin3_6 bin3_7
+[10:11:23] Fixed 2 duplicate /gene - polC_1 polC_2
+[10:11:23] Fixed 3 duplicate /gene - xpkA_1 xpkA_2 xpkA_3
+[10:11:23] Fixed 2 duplicate /gene - folT_1 folT_2
+[10:11:23] Fixed 2 duplicate /gene - galK_1 galK_2
+[10:11:23] Fixed 3 duplicate /gene - prsA_1 prsA_2 prsA_3
+[10:11:23] Fixed 2 duplicate /gene - puuR_1 puuR_2
+[10:11:23] Fixed 2 duplicate /gene - rsmH_1 rsmH_2
+[10:11:23] Fixed 2 duplicate /gene - cpdA_1 cpdA_2
+[10:11:23] Fixed 2 duplicate /gene - nfo_1 nfo_2
+[10:11:23] Fixed 2 duplicate /gene - trxA_1 trxA_2
+[10:11:23] Fixed 2 duplicate /gene - mntB_1 mntB_2
+[10:11:23] Fixed 2 duplicate /gene - ftsK_1 ftsK_2
+[10:11:23] Fixed 7 duplicate /gene - dgaR_1 dgaR_2 dgaR_3 dgaR_4 dgaR_5 dgaR_6 dgaR_7
+[10:11:23] Fixed 2 duplicate /gene - malL_1 malL_2
+[10:11:23] Fixed 2 duplicate /gene - rspR_1 rspR_2
+[10:11:23] Fixed 2 duplicate /gene - mnmG_1 mnmG_2
+[10:11:23] Fixed 3 duplicate /gene - ybiT_1 ybiT_2 ybiT_3
+[10:11:23] Fixed 2 duplicate /gene - gltC_1 gltC_2
+[10:11:23] Fixed 2 duplicate /gene - lipO_1 lipO_2
+[10:11:23] Fixed 3 duplicate /gene - yjhB_1 yjhB_2 yjhB_3
+[10:11:23] Fixed 3 duplicate /gene - lacR_1 lacR_2 lacR_3
+[10:11:23] Fixed 2 duplicate /gene - yfnB_1 yfnB_2
+[10:11:23] Fixed 2 duplicate /gene - iscS_1 iscS_2
+[10:11:23] Fixed 2 duplicate /gene - murR_1 murR_2
+[10:11:23] Fixed 2 duplicate /gene - mtlF_1 mtlF_2
+[10:11:23] Fixed 2 duplicate /gene - gmk_1 gmk_2
+[10:11:23] Fixed 2 duplicate /gene - rpe_1 rpe_2
+[10:11:23] Fixed 2 duplicate /gene - gatB_1 gatB_2
+[10:11:23] Fixed 2 duplicate /gene - arcD1_1 arcD1_2
+[10:11:23] Fixed 2 duplicate /gene - intQ_1 intQ_2
+[10:11:23] Fixed 2 duplicate /gene - ligA_1 ligA_2
+[10:11:23] Fixed 2 duplicate /gene - oppD_1 oppD_2
+[10:11:23] Fixed 2 duplicate /gene - rlmCD_1 rlmCD_2
+[10:11:23] Fixed 3 duplicate /gene - murJ_1 murJ_2 murJ_3
+[10:11:23] Fixed 2 duplicate /gene - yheS_1 yheS_2
+[10:11:23] Fixed 2 duplicate /gene - pyrK_1 pyrK_2
+[10:11:23] Fixed 2 duplicate /gene - tuf_1 tuf_2
+[10:11:23] Fixed 2 duplicate /gene - pheT_1 pheT_2
+[10:11:23] Fixed 2 duplicate /gene - ybbH_1 ybbH_2
+[10:11:23] Fixed 2 duplicate /gene - msrA_1 msrA_2
+[10:11:23] Fixed 2 duplicate /gene - uxuA_1 uxuA_2
+[10:11:23] Fixed 2 duplicate /gene - rpsN2_1 rpsN2_2
+[10:11:23] Fixed 2 duplicate /gene - cdaR_1 cdaR_2
+[10:11:23] Fixed 5 duplicate /gene - spxA_1 spxA_2 spxA_3 spxA_4 spxA_5
+[10:11:23] Fixed 3 duplicate /gene - crr_1 crr_2 crr_3
+[10:11:23] Fixed 2 duplicate /gene - gap_1 gap_2
+[10:11:23] Fixed 5 duplicate /gene - fruA_1 fruA_2 fruA_3 fruA_4 fruA_5
+[10:11:23] Fixed 2 duplicate /gene - rex_1 rex_2
+[10:11:23] Fixed 2 duplicate /gene - dtpT_1 dtpT_2
+[10:11:23] Fixed 3 duplicate /gene - yteP_1 yteP_2 yteP_3
+[10:11:23] Fixed 3 duplicate /gene - ptsG_1 ptsG_2 ptsG_3
+[10:11:23] Fixed 2 duplicate /gene - yfmO_1 yfmO_2
+[10:11:23] Fixed 2 duplicate /gene - steT_1 steT_2
+[10:11:23] Fixed 4 duplicate /gene - lytA_1 lytA_2 lytA_3 lytA_4
+[10:11:23] Fixed 2 duplicate /gene - cas2_1 cas2_2
+[10:11:23] Fixed 2 duplicate /gene - gadC_1 gadC_2
+[10:11:23] Fixed 2 duplicate /gene - ulaB_1 ulaB_2
+[10:11:23] Fixed 2 duplicate /gene - sorB_1 sorB_2
+[10:11:23] Fixed 5 duplicate /gene - sorA_1 sorA_2 sorA_3 sorA_4 sorA_5
+[10:11:23] Fixed 3 duplicate /gene - ltaS1_1 ltaS1_2 ltaS1_3
+[10:11:23] Fixed 2 duplicate /gene - rimI_1 rimI_2
+[10:11:23] Fixed 3 duplicate /gene - licC_1 licC_2 licC_3
+[10:11:23] Fixed 2 duplicate /gene - pbpX_1 pbpX_2
+[10:11:23] Fixed 8 duplicate /gene - manZ_1 manZ_2 manZ_3 manZ_4 manZ_5 manZ_6 manZ_7 manZ_8
+[10:11:23] Fixed 3 duplicate /gene - celA_1 celA_2 celA_3
+[10:11:23] Fixed 3 duplicate /gene - znuC_1 znuC_2 znuC_3
+[10:11:23] Fixed 2 duplicate /gene - def_1 def_2
+[10:11:23] Fixed 2 duplicate /gene - ecsA_1 ecsA_2
+[10:11:23] Fixed 4 duplicate /gene - walK_1 walK_2 walK_3 walK_4
+[10:11:23] Fixed 2 duplicate /gene - ybaK_1 ybaK_2
+[10:11:23] Fixed 2 duplicate /gene - ohrB_1 ohrB_2
+[10:11:23] Fixed 2 duplicate /gene - tadA_1 tadA_2
+[10:11:23] Fixed 253 colliding /gene names.
+[10:11:23] Adding /locus_tag identifiers
+[10:11:23] Assigned 3175 locus_tags to CDS and RNA features.
+[10:11:23] Writing outputs to /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/
+[10:11:25] Generating annotation statistics file
+[10:11:25] Generating Genbank and Sequin files
+[10:11:25] Running: tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.12 from https://github.com/tseemann/prokka' -Z \/home\/miba8458\/2020\.03_GenomeAnalysisCourse\/scratch\/7_DNA_prokka_onCanu\/prokka_canu\.err -i \/home\/miba8458\/2020\.03_GenomeAnalysisCourse\/scratch\/7_DNA_prokka_onCanu\/prokka_canu\.fsa 2> /dev/null
+[10:11:32] Deleting unwanted file: /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/errorsummary.val
+[10:11:32] Deleting unwanted file: /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.dr
+[10:11:32] Deleting unwanted file: /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.fixedproducts
+[10:11:32] Deleting unwanted file: /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.ecn
+[10:11:32] Deleting unwanted file: /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.val
+[10:11:32] Repairing broken .GBK output that tbl2asn produces...
+[10:11:32] Running: sed 's/COORDINATES: profile/COORDINATES:profile/' < \/home\/miba8458\/2020\.03_GenomeAnalysisCourse\/scratch\/7_DNA_prokka_onCanu\/prokka_canu\.gbf > \/home\/miba8458\/2020\.03_GenomeAnalysisCourse\/scratch\/7_DNA_prokka_onCanu\/prokka_canu\.gbk
+[10:11:32] Deleting unwanted file: /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.gbf
+[10:11:32] Output files:
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.log
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.fna
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.gff
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.faa
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.ffn
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.tbl
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.fsa
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.tsv
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.txt
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.sqn
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.gbk
+[10:11:32] /home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu.err
+[10:11:32] Annotation finished successfully.
+[10:11:32] Walltime used: 6.52 minutes
+[10:11:32] If you use this result please cite the Prokka paper:
+[10:11:32] Seemann T (2014) Prokka: rapid prokaryotic genome annotation. Bioinformatics. 30(14):2068-9.
+[10:11:32] Type 'prokka --citation' for more details.
+[10:11:32] Share and enjoy!
+starting Artemis with flags: -mx500m -ms20m -noverify -Dartemis.environment=UNIX
+Exception in thread "main" java.awt.AWTError: Can't connect to X11 window server using 'localhost:51.0' as the value of the DISPLAY variable.
+	at sun.awt.X11GraphicsEnvironment.initDisplay(Native Method)
+	at sun.awt.X11GraphicsEnvironment.access$200(X11GraphicsEnvironment.java:65)
+	at sun.awt.X11GraphicsEnvironment$1.run(X11GraphicsEnvironment.java:115)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.awt.X11GraphicsEnvironment.<clinit>(X11GraphicsEnvironment.java:74)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at java.awt.GraphicsEnvironment.createGE(GraphicsEnvironment.java:103)
+	at java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment(GraphicsEnvironment.java:82)
+	at sun.awt.X11.XToolkit.<clinit>(XToolkit.java:132)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at java.awt.Toolkit$2.run(Toolkit.java:860)
+	at java.awt.Toolkit$2.run(Toolkit.java:855)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.Toolkit.getDefaultToolkit(Toolkit.java:854)
+	at java.awt.Toolkit.getEventQueue(Toolkit.java:1740)
+	at java.awt.EventQueue.invokeLater(EventQueue.java:1294)
+	at javax.swing.SwingUtilities.invokeLater(SwingUtilities.java:1295)
+	at uk.ac.sanger.artemis.components.ArtemisMain.main(ArtemisMain.java:784)

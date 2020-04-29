@@ -11,6 +11,7 @@
 module purge
 module load bioinfo-tools
 module load prokka
+module load artemis
 ####################################
 
 # annotate assemblies with 'prokka'
