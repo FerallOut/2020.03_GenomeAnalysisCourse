@@ -4,7 +4,7 @@
 #SBATCH -p core			# core/ node
 #SBATCH -n 1			# nr of cores/ nodes
 #SBATCH -t 00:30:00		# time needed (dd-hh:mm:ss)
-#SBATCH -J Mummer_Canu_PacBio_ref	# a name for your job
+#SBATCH -J Mummer_Canu_Spades	# a name for your job
 ####################################
 
 # Load modules
@@ -27,10 +27,17 @@ module load MUMmer
 
 # Input sources
 input_Canu_Pacbio=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/5_DNA_Pilon_onCanu_PacBio/pilon_output_canu_nano.fasta
-intput_Spades_Nano=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/contigs.fasta
+input_Spades_Nano=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/contigs.fasta
 ####################################
 
 # Code to run
-nucmer ${intput_Spades_Nano} ${input_Canu_PacBio}
+#nucmer --mum -p compare_spades_canu ${input_Spades_Nano} ${input_Canu_PacBio}
+#nucmer -p compare_spades_canu ${input_Spades_Nano} ${input_Canu_PacBio} 
+#mummerplot compare_spades_canu --layout -R ${input_Spades_Nano} -Q ${input_Canu_PacBio} --png -p compare_spades_canu compare_spades_canu.out
+#mummerplot -p compare_spades_canu1 --png compare_spades_canu.delta
 
-mummerplot --png out.delta
+nucmer --maxmatch -l 100 -c 100 -p compare_spades_canu ${input_Spades_Nano} ${input_Canu_PacBio} 
+
+delta-filter -i 80 -l 1000 compare_spades_canu.delta > compare_spades_canu_filtered.delta
+
+mummerplot --png -p compare_spades_canu_filtered compare_spades_canu_filtered.delta --layout
