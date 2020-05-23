@@ -20,7 +20,7 @@ module load FastQC
 # Input sources
 extension=fq.gz                 # work only on '.fq.gz' files
 source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/Illumina/
-output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/1fastqc_DNA_Illumina
+output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/1_fastqc_DNA_Illumina
 mkdir -p ${output_folder}	# creates the output folders if they don't exist y
 ####################################
 
