@@ -2,7 +2,11 @@
   * [B. Project Execution](./B.-Project-Execution)
     * [1. Quality control_DNA](./B.-Project-Execution%3A-1.-Quality-control_DNA)
     * [2. Genome assembly_Canu_NanoBio](./B.-Project-Execution%3A-2.-Genome assembly_Canu_NanoBio)
+      * [a. Mapping DNA_BWA](./B.-Project-Execution%3A-2.-Genome assembly_Canu_NanoBio%3A-a.-Mapping DNA_BWA)
+      * [b. Correct genome_Pilon](./B.-Project-Execution%3A-2.-Genome assembly_Canu_NanoBio%3A-b.-Correct genome_Pilon)
     * [2. Genome assembly_Canu_PacBio](./B.-Project-Execution%3A-2.-Genome assembly_Canu_PacBio)
+      * [a. Mapping DNA_BWA](./B.-Project-Execution%3A-2.-Genome assembly_Canu_PacBio%3A-a.-Mapping DNA_BWA)
+      * [b. Correct genome_Pilon](./B.-Project-Execution%3A-2.-Genome assembly_Canu_PacBio%3A-b.-Correct genome_Pilon)
     * [3. Genome assembly_SPAdes](./B.-Project-Execution%3A-3.-Genome assembly_SPAdes)
 
 
