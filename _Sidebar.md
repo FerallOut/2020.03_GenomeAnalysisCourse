@@ -1,3 +1,4 @@
+  * [Home](./Home)
   * [A. Project Planning, workflow and data management](./A.-Project-Planning,-workflow-and-data-management)
   * [B. Project Execution](./B.-Project-Execution)
     * [1_Quality control_DNA](./B.-Project-Execution%3A-1_Quality-control_DNA)
