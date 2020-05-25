@@ -23,18 +23,18 @@ module load artemis
 ####################################
 
 # Input sources
-input_Spades=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2a_DNA_spades_Nano_Illumina/contigs.fasta
+input_Canu=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/5_DNA_Pilon_onCanu_PacBio/pilon_output_canu_nano.fasta
 reference_file_475=/home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_000174395.2_ASM17439v2_genomic.fna
 reference_file_VRE=/home/miba8458/2020.03_GenomeAnalysisCourse/data/GCF_009697285.1_ASM969728v1_genomic.fna
 
-output_directory=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/8a_DNA_blast_act_Spades
+output_directory=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/8a_DNA_blast_act_onCanu
 ####################################
 
 # Code to run
-makeblastdb -in ${input_Spades} -dbtype nucl -out spades
+makeblastdb -in ${input_Canu} -dbtype nucl -out canu
 
-blastn -query ${reference_file_475} -out spades_475.crunch -db spades -outfmt 6  > spades_vs_ref475.act
-blastn -query ${reference_file_VRE} -out spades_VRE.crunch -db spades -outfmt 6 > spades_vs_refVRE.act
+blastn -query ${reference_file_475} -out canu_475.crunch -db canu -outfmt 6 > canu_vs_ref475.act
+blastn -query ${reference_file_VRE} -out canu_VRE.crunch -db canu -outfmt 6 > canu_vs_refVRE.act
 
 # open user interface
 act

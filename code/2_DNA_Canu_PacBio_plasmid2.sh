@@ -22,15 +22,15 @@ module load canu
 
 # Input sources
 extension=fastq.gz               # work only on '.fastq.gz' files
-source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/PacBio/
+source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/genomics_data/PacBio
 prefix_files=canu_pacbio         # -p is the assembly prefix and will be prefixed to all output Files
 output_folder_name=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio_modif
                                  #-d is the directory that it will make and write all the files to.
-genome_size=2.8                  # size of chromosome from paper 
+genome_size=3.2                  # size of chromosome from paper 
 ####################################
 
 # Code to run
 
 canu -p ${prefix_files} -d ${output_folder_name} \
-corMhapSensitivity=high corMinCoverage=0 genomeSize=${genome_size}m \
--pacbio-raw ${source_files}*.${extension}
+genomeSize=${genome_size}m \
+-pacbio-raw ${source_files}/*subreads*
