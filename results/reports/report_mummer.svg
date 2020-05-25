@@ -2184,9 +2184,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="30.850411"
-     inkscape:cx="803.37412"
-     inkscape:zoom="0.175"
+     inkscape:cy="368.52222"
+     inkscape:cx="1058.0047"
+     inkscape:zoom="0.24748737"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -2349,13 +2349,13 @@
     <text
        inkscape:export-ydpi="44"
        inkscape:export-xdpi="44"
-       transform="translate(-221.01248,200.4911)"
+       transform="translate(-161.5825,200.0499)"
        style="font-style:normal;font-weight:normal;font-size:14.1111px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect9909);fill:#000000;fill-opacity:1;stroke:none;"
        id="text9907"
        xml:space="preserve"><tspan
          x="165.08203"
          y="-335.90756"><tspan
-           style="shape-inside:url(#rect9909)">Canu_PacBio                            SPAdes_Nanopore_Illumina    Canu_PacBio vs SPAdes_Nanopore_Illumina</tspan></tspan></text>
+           style="shape-inside:url(#rect9909)">Canu_PacBio               SPAdes_Nanopore_Illumina               Canu vs SPAdes</tspan></tspan></text>
     <image
        inkscape:export-ydpi="44"
        inkscape:export-xdpi="44"
@@ -2928,7 +2928,7 @@ TkSuQmCC
        preserveAspectRatio="none"
        height="211.66667"
        width="211.66667"
-       x="-130.93091"
+       x="-64.34214"
        y="-131.7935" />
     <image
        inkscape:export-ydpi="44"
@@ -3235,7 +3235,7 @@ RU5ErkJggg==
        preserveAspectRatio="none"
        height="211.66667"
        width="211.66667"
-       x="421.59195"
+       x="359.52039"
        y="-131.7935" />
   </g>
 </svg>
