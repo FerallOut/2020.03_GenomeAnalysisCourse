@@ -19,7 +19,7 @@ module load trimmomatic
 
 # Input sources
 extension=fastq.gz
-source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/transcriptomics_data/RNA-Seq_Serum/untrimmed/
+source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/transcriptomics_data/RNA-Seq_Serum/untrimmed
 output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/9_RNA_trimmomatic_serum		#output saved in "scratch" folder
 mkdir -p ${output_folder}		# creates the output folders if they don't exist yet
 
@@ -33,10 +33,11 @@ out_file_basename=serum
 
 for name in ${base_name_in}
 do
-  java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred64\
-  -trimlog ${output_folder}trimlog.txt -baseout ${output_folder}${out_file_basename}\
-  ${source_files}/"${base_name_in}1*" ${source_files}/"${base_name_in}2*"\
-  ${output_folder}/${base_name_in}1P.extension ${output_folder}/${base_name_in}1U.extension\
-  ${output_folder}/${base_name_in}2P.extension ${output_folder}/${base_name_in}2U.extension\
-  ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:10 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:50
+  java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2\
+  ${source_files}/${name}1.${extension} ${source_files}/${name}2.${extension}\
+  ${output_folder}/${name}1P.${extension} ${output_folder}/${name}1U.${extension}\
+  ${output_folder}/${name}2P.${extension} ${output_folder}/${name}2U.${extension}\
+  ILLUMINACLIP:$TRIMMOMATIC_HOME/adapters/TruSeq3-PE.fa:2:30:10\
+  LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:50 
 done
+
