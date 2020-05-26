@@ -3,7 +3,7 @@
 #SBATCH -A g2020008		# code of the project
 #SBATCH -p core			# core/ node
 #SBATCH -n 2			# nr of cores/ nodes
-#SBATCH -t 00:20:00		# time needed (dd-hh:mm:ss)
+#SBATCH -t 02:20:00		# time needed (dd-hh:mm:ss)
 #SBATCH -J FastQC_RNA		# a name for your job
 ####################################
 
@@ -19,33 +19,18 @@ module load FastQC
 
 # Input sources
 extension=fastq.gz                 # work only on '.fastq.gz' files
-source_files_BHI=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/transcriptomics_data/RNA-Seq_BH/
-output_folder_BHI=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/9_fastqc_RNA_BHI
-
-source_files_serum=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/transcriptomics_data/RNA-Seq_Serum/untrimmed/
+source_files_serum=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/transcriptomics_data/RNA-Seq_Serum
 output_folder_serum=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/9_fastqc_RNA_serum
 
-mkdir -p ${output_folder_BHI} ${output_folder_serum}	# creates the output folders if they don't exist y
+mkdir -p ${output_folder_serum}	# creates the output folders if they don't exist y
 ####################################
 
 # Code to run for BHI files
-my_file_BHI=${source_files_BHI}*.${extension}
-
-for i in $my_file_BHI 		
-do
-   fastqc --extract --outdir="$output_folder_BHI" $my_file_BHI
-done
-
-mv *.out ${output_folder_BHI}
-#############
-# Code to run for serum
 my_file_serum=${source_files_serum}*.${extension}
 
-for i in $my_file_serum
+for i in $my_file_serum 		
 do
    fastqc --extract --outdir="$output_folder_serum" $my_file_serum
 done
 
 mv *.out ${output_folder_serum}
-
-
