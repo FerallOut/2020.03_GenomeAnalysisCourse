@@ -18,21 +18,25 @@ module load trimmomatic
 ####################################
 
 # Input sources
-source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/transcriptomics_data/RNA-Seq_BH/
-output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/9_RNA_trimmomatic_BHI/		#output saved in "scratch" folder
+extension=fastq.gz
+source_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/transcriptomics_data/RNA-Seq_Serum/untrimmed/
+output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/9_RNA_trimmomatic_serum		#output saved in "scratch" folder
 mkdir -p ${output_folder}		# creates the output folders if they don't exist yet
 
-out_file_basename=BHI
+base_name_in="ERR1797969_pass_ ERR1797970_pass_ ERR1797971_pass_"
 
-slurm_out=/home/miba8458/2020.03_GenomeAnalysisCourse/results/reports/2_DNA_trimmomatic_fastqc_DNA_Illumina/	# the path to the folder where "slurm.out" file will be moved to ("results" folder)
-mkdir -p ${slurm_out}
+out_file_basename=serum
 ####################################
 
 # Code to run
 # !code bug: if you use -basein or -baseout, you need to put these options _before_ the explicit file names - even if this means putting the templated output files (via -baseout) before the explicit input files. 
 
-java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred64\
--trimlog ${output_folder}trimlog.txt -baseout ${output_folder}${out_file_basename}\
-${source_files}${in_file1} ${source_files}${in_file2} LEADING:10 SLIDINGWINDOW:4:10 MINLEN:25	# dropped TRAILING 10
-
-mv *.out ${slurm_out}	# move "slurm.out" file to "results" folder
+for name in ${base_name_in}
+do
+  java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 -phred64\
+  -trimlog ${output_folder}trimlog.txt -baseout ${output_folder}${out_file_basename}\
+  ${source_files}/"${base_name_in}1*" ${source_files}/"${base_name_in}2*"\
+  ${output_folder}/${base_name_in}1P.extension ${output_folder}/${base_name_in}1U.extension\
+  ${output_folder}/${base_name_in}2P.extension ${output_folder}/${base_name_in}2U.extension\
+  ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:10 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:50
+done

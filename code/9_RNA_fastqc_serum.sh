@@ -19,8 +19,8 @@ module load FastQC
 
 # Input sources
 extension=fastq.gz                 # work only on '.fastq.gz' files
-source_files_serum=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/transcriptomics_data/RNA-Seq_Serum
-output_folder_serum=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/9_fastqc_RNA_serum
+source_files_serum=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/transcriptomics_data/RNA-Seq_Serum/
+output_folder_serum=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/9_fastqc_RNA_serum/
 
 mkdir -p ${output_folder_serum}	# creates the output folders if they don't exist y
 ####################################
