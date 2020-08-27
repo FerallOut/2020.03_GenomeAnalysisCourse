@@ -24,9 +24,9 @@ module load samtools
 input_Canu_Pacbio=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/2_DNA_canu_PacBio/canu_pacbio.contigs.fasta
 source_BHI_files=/home/miba8458/2020.03_GenomeAnalysisCourse/data/raw_ext/link_to_raw_data/transcriptomics_data/RNA-Seq_BH/
 
-output_folder_rep1=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/10_RNA_bwa_BHI_onCanu/BHI_rep1
-output_folder_rep2=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/10_RNA_bwa_BHI_onCanu/BHI_rep2
-output_folder_rep3=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/10_RNA_bwa_BHI_onCanu/BHI_rep3
+output_folder_rep1=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/10_RNA_bwa_onCanu/BHI_rep1
+output_folder_rep2=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/10_RNA_bwa_onCanu/BHI_rep2
+output_folder_rep3=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/10_RNA_bwa_onCanu/BHI_rep3
 
 mkdir -p ${output_folder_rep1} ${output_folder_rep2} ${output_folder_rep3}		# creates the output folders if they don't exist yet
 ####################################
@@ -43,13 +43,13 @@ bwa index -p ${output_folder_rep3}/pacbio_index ${input_Canu_Pacbio}
 # 'sort' outputs directly to 'bam' (no need for separate 'sam' to 'bam' conversion), and sorts
 
 bwa mem -M ${output_folder_rep1}/pacbio_index ${source_BHI_files}trim_paired_ERR1797972_pass_1.fastq.gz ${source_BHI_files}trim_paired_ERR1797972_pass_2.fastq.gz | \
-samtools sort -o ${output_folder_rep1}/align_BHI_to_pacbio_sorted_rep1.bam
+samtools sort -n -o ${output_folder_rep1}/align_BHI_to_pacbio_sorted_rep1.bam
  
 bwa mem -M ${output_folder_rep2}/pacbio_index ${source_BHI_files}trim_paired_ERR1797973_pass_1.fastq.gz ${source_BHI_files}trim_paired_ERR1797973_pass_2.fastq.gz | \
-samtools sort -o ${output_folder_rep2}/align_BHI_to_pacbio_sorted_rep2.bam
+samtools sort -n -o ${output_folder_rep2}/align_BHI_to_pacbio_sorted_rep2.bam
 
 bwa mem -M ${output_folder_rep3}/pacbio_index ${source_BHI_files}trim_paired_ERR1797974_pass_1.fastq.gz ${source_BHI_files}trim_paired_ERR1797974_pass_2.fastq.gz | \
-samtools sort -o ${output_folder_rep3}/align_BHI_to_pacbio_sorted_rep3.bam
+samtools sort -n -o ${output_folder_rep3}/align_BHI_to_pacbio_sorted_rep3.bam
 
 
 # index the sorted bam file
