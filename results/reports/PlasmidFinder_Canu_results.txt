@@ -1,0 +1,10 @@
+DB	Plasmid	ID      Query / Template Contig		    Pos. in contig   Note    	     Accession nr
+                            length
+Inc18	rep1	100.0	1491 / 1491	tig00000007_pilon    10528..12018    repE(pAMbeta)   AF007787
+Inc18	rep2	99.87	1495 / 1494	tig00000007_pilon    181..1674	     orf1(pRE25)     X92945
+Inc18	rep2	100.0	1494 / 1494	tig00000007_pilon    32605..34098    orf1(pRE25)     X92945
+Inc18	repUS7	100.0	1602 / 1602	tig00000013_pilon    6567..8168	     rep(pMG1)	     AB206333
+Rep3	rep29	100.0	738 / 738	tig00000008_pilon    8865..9602	     EFAU085p4001    Aus0085
+RepA_N	rep17	100.0	1041 / 1041	tig00000009_pilon    9724..10764     CDS29(pRUM)     AF507977
+RepA_N	repUS15	99.62	1041 / 1041	tig00000006_pilon    11199..12238    repA(pNB2354p1) CP004064
+RepA_N	repUS15	99.71	1041 / 1041	tig00000003_pilon    3660..4700	     repA(pNB2354p1) CP004064

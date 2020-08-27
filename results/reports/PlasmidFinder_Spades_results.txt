@@ -1,0 +1,8 @@
+DB     Plasmid	Identity Query / Template Contig	        	      Pos. in contig  Note	     Accession nr
+			   length
+Inc18	rep1	100.0	1491 / 1491	NODE_9_length_31334_cov_224.503597    14964..16454    repE(pAMbeta)   AF007787
+Inc18	rep2	100.0	1494 / 1494	NODE_9_length_31334_cov_224.503597    25308..26801    orf1(pRE25)     X92945
+Inc18	repUS7	100.0	1602 / 1602	NODE_8_length_62897_cov_74.024920     21672..23273    rep(pMG1)	      AB206333
+Rep3	rep29	100.0	738 / 738	NODE_11_length_9325_cov_146.068608    108..845        EFAU085p4001    Aus0085
+RepA_N	rep17	100.0	1041 / 1041	NODE_10_length_12383_cov_107.950438   4055..5095      CDS29(pRUM)     AF507977
+RepA_N	repUS15	99.71	1041 / 1041	NODE_4_length_266941_cov_102.662627   20544..21584    repA(pNB2354p1) CP004064
