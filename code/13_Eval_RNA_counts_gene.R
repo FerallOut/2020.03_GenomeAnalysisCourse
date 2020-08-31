@@ -10,36 +10,16 @@ Ser_2 <- read.csv2("serum_ERR1797970_rep2.txt", row.names = 1, col.names = c('ID
 Ser_3 <- read.csv2("serum_ERR1797971_rep3.txt", row.names = 1, col.names = c('ID', 'gene_name', 'count_ser_3'), sep = "\t", na.strings = "NA", fill = TRUE)
 
 expData <- data.frame(BHI_1, BHI_2['count_BHI_2'], BHI_3['count_BHI_3'], Ser_1['count_ser_1'], Ser_2['count_ser_2'], Ser_3['count_ser_3'])
-write.csv(expData, "Matrix_reads_gene.csv", row.names=T)
-#######
+#write.csv(expData, "Matrix_reads_gene.csv", row.names=T)
+#############################################
 
 # get number of aligned reads for each experiment 
 OnlyNumCol <- expData[c(2:7)] 
-totalReads <- colSums(OnlyNumCol)
-notAlignedReads <- OnlyNumCol["__not_aligned",]
-AlignedReads <- totalReads - notAlignedReads
-percentAlignedReads <- OverallAlignedReads * 100 / OverallTotalReads
-#######
 
-# get number of aligned reads in total
-OverallTotalReads <- sum(totalReads)
-OverallNotAlignedReads <- sum(notAlignedReads)
-OverallAlignedReads <- sum(AlignedReads)
-########
+# Distribution of mapped reads
+hist(OnlyNumCol[,1], main="Distribution of RNA reads", xlab="Counts")
 
-# percentual calculation of the overall number of reads that has mapped to the reference
-PercentOverallAlignedReads <- OverallAlignedReads * 100 / OverallTotalReads
-PercentOverallAlignedReads
-##############
+log2_counts <- log2(OnlyNumCol+1)
 
-# remove the table from the end of the files and save that matrix
-lenMatrix<-dim(OnlyNumCol)[1]
-ReadsFeatures<-OnlyNumCol[1:(lenMatrix-5),]
-
-#OnlyNumCol <- ReadsFeatures[c(2:7)] 
-OverallTotalReadsFeatures <- sum(colSums(OnlyNumCol))
-PercentReadsFeatures <- OverallTotalReadsFeatures * 100 / OverallTotalReads
-PercentReadsFeatures
-
-OverallNoFeatures <- sum(OnlyNumCol["__no_feature",])
-OverallNoFeatures
+boxplot(log2_counts, main="Distribution of log2-normalized RNA reads data")
+hist(log2_counts[,1], main="Distribution of log2-normalized RNA reads data", xlab="Counts")
