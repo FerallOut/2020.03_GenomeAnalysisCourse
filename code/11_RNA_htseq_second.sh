@@ -13,8 +13,8 @@ module load bioinfo-tools
 module load htseq
 ####################################
 
-input_mapped_RNA=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/10_RNA_bwa_BHI_onCanu
-input_annotation=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu_filtered.gff
+input_mapped_RNA=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/10_RNA_bwa_second
+input_annotation=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/7_DNA_prokka_onCanu/prokka_canu_rename.gff
 
 output_folder=/home/miba8458/2020.03_GenomeAnalysisCourse/scratch/11_RNA_htseq_second
 mkdir -p ${output_folder}		# creates the output folders if they don't exist yet
@@ -32,5 +32,5 @@ htseq-count -t CDS -i ID -f bam -s reverse ${input_mapped_RNA}/serum_rep1/align_
  
 htseq-count -t CDS -i ID -f bam -s reverse ${input_mapped_RNA}/serum_rep2/align_serum_to_pacbio_sorted_rep2.bam ${input_annotation} > ${output_folder}/serum_ERR1797970_rep2.txt 
 
-htseq-count -t CDS -i ID -f bam -s reverse${input_mapped_RNA}/serum_rep3/align_serum_to_pacbio_sorted_rep3.bam ${input_annotation} > ${output_folder}/serum_ERR1797971_rep3.txt 
+htseq-count -t CDS -i ID -f bam -s reverse ${input_mapped_RNA}/serum_rep3/align_serum_to_pacbio_sorted_rep3.bam ${input_annotation} > ${output_folder}/serum_ERR1797971_rep3.txt 
 
