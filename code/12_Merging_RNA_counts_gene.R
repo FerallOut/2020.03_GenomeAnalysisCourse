@@ -13,8 +13,8 @@ expData <- data.frame(BHI_1, BHI_2['count_BHI_2'], BHI_3['count_BHI_3'], Ser_1['
 write.csv(expData, "Matrix_reads_gene.csv", row.names=T)
 #######
 
-# get number of aligned reads for each experiment 
-OnlyNumCol <- expData[c(2:7)] 
+  # get number of aligned reads for each experiment 
+  OnlyNumCol <- expData[c(2:7)] 
 totalReads <- colSums(OnlyNumCol)
 notAlignedReads <- OnlyNumCol["__not_aligned",]
 AlignedReads <- totalReads - notAlignedReads
